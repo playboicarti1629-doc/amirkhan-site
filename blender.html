@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Работы в Blender — Толеутай Амирхан</title>
+  <meta name="description" content="Мои 3D-модели из Blender: автомобиль и яблоко.">
+  <link rel="stylesheet" href="css/styles.css">
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+  <script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}</script>
+</head>
+<body>
+
+<header class="site-header">
+  <button type="button" class="theme-toggle" id="themeToggle" aria-pressed="false">☾ Тёмная тема</button>
+  <h1>Работы в Blender</h1>
+  <p>Толеутай Амирхан · Web Design · группа 2-135 W-D</p>
+</header>
+
+<button type="button" class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="siteNav">☰ Меню</button>
+<nav class="site-nav" id="siteNav" aria-label="Основное меню">
+    <a href="index.html">Главная</a>
+    <a href="safety.html">Техника безопасности</a>
+    <a href="hardware.html">Оборудование</a>
+    <a href="software.html">ОС и ПО</a>
+    <a href="security.html">Информационная безопасность</a>
+    <a href="blender.html" class="active" aria-current="page">Blender</a>
+    <a href="figma.html">Figma</a>
+    <a href="ux-ui.html">UX/UI</a>
+    <a href="html-css.html">HTML, CSS и JS</a>
+    <a href="reviews.html">Отзывы</a>
+</nav>
+
+<main class="page-content" id="content">
+<h2 class="section-title">Мои работы в Blender</h2>
+<p class="intro">Эти модели я сделал сам, вручную. Сначала изучал, какие в Blender есть функции и куда что нажимать, а потом уже самостоятельно создавал модели. Модель можно покрутить мышью или пальцем, а рядом показаны изображения с разных сторон.</p>
+
+<section class="project" aria-labelledby="car">
+  <h3 id="car">Спортивный автомобиль</h3>
+  <p>Красная спортивная машина. Я собирал её по частям: кузов, колёса, фары, салон и другие детали. Это моя более сложная работа, на ней я потренировался соединять много деталей в одну модель.</p>
+  <div class="project-grid">
+    <div>
+      <model-viewer src="models/my-car.glb" style="--poster:url(images/blender/car-front.png)" poster="images/blender/car-front.png" alt="3D-модель спортивного автомобиля" camera-controls auto-rotate touch-action="pan-y" shadow-intensity="1" loading="lazy"></model-viewer>
+      <p class="hint">Модель можно вращать: потяните мышью или пальцем.</p>
+    </div>
+    <div data-gallery aria-label="Ракурсы: автомобиль">
+      <img class="gallery-main" src="images/blender/car-front.png" alt="Автомобиль: вид спереди сбоку" loading="lazy">
+      <p class="gallery-caption">Автомобиль: вид спереди сбоку</p>
+      <div class="gallery-thumbs">
+        <button type="button" class="active" data-src="images/blender/car-front.png" data-alt="Автомобиль: вид спереди сбоку" aria-pressed="true" aria-label="Автомобиль: вид спереди сбоку"><img src="images/blender/car-front.png" alt="" loading="lazy"></button>
+        <button type="button" class="" data-src="images/blender/car-side.png" data-alt="Автомобиль: вид сбоку" aria-pressed="false" aria-label="Автомобиль: вид сбоку"><img src="images/blender/car-side.png" alt="" loading="lazy"></button>
+        <button type="button" class="" data-src="images/blender/car-rear.png" data-alt="Автомобиль: вид сзади сбоку" aria-pressed="false" aria-label="Автомобиль: вид сзади сбоку"><img src="images/blender/car-rear.png" alt="" loading="lazy"></button>
+        <button type="button" class="" data-src="images/blender/car-top.png" data-alt="Автомобиль: вид сверху" aria-pressed="false" aria-label="Автомобиль: вид сверху"><img src="images/blender/car-top.png" alt="" loading="lazy"></button>
+      </div>
+      <p class="hint">Нажмите на картинку, чтобы увеличить. Ракурсы можно переключать стрелками ← →.</p>
+    </div>
+  </div>
+  <h4>Что использовал в Blender</h4>
+  <ul class="tag-list">
+    <li>Простые фигуры (куб, цилиндр)</li><li>Перемещение, поворот и изменение размера</li><li>Цвета и материалы</li><li>Сохранение модели для сайта (.glb)</li>
+  </ul>
+  <h4>Как я делал</h4>
+  <ol>
+    <li>Сделал основу машины — кузов.</li>
+    <li>Добавил колёса и другие детали: фары, салон, выхлопные трубы.</li>
+    <li>Покрасил детали в разные цвета.</li>
+    <li>Сохранил готовую модель, чтобы показать её на сайте.</li>
+  </ol>
+  <p><a class="btn secondary" href="models/my-car.glb" download>Скачать модель (.glb)</a></p>
+</section>
+
+<section class="project" aria-labelledby="apple">
+  <h3 id="apple">Яблоко</h3>
+  <p>Красное яблоко с коричневым черенком. Это моя первая модель в Blender: на простой форме я учился основным действиям.</p>
+  <div class="project-grid">
+    <div>
+      <model-viewer src="models/my-first-apple.glb" style="--poster:url(images/blender/apple-front.png)" poster="images/blender/apple-front.png" alt="3D-модель яблока" data-recolor camera-controls auto-rotate touch-action="pan-y" shadow-intensity="1" loading="lazy"></model-viewer>
+      <p class="hint">Модель можно вращать: потяните мышью или пальцем.</p>
+    </div>
+    <div data-gallery aria-label="Ракурсы: яблоко">
+      <img class="gallery-main" src="images/blender/apple-front.png" alt="Яблоко: общий вид" loading="lazy">
+      <p class="gallery-caption">Яблоко: общий вид</p>
+      <div class="gallery-thumbs">
+        <button type="button" class="active" data-src="images/blender/apple-front.png" data-alt="Яблоко: общий вид" aria-pressed="true" aria-label="Яблоко: общий вид"><img src="images/blender/apple-front.png" alt="" loading="lazy"></button>
+        <button type="button" class="" data-src="images/blender/apple-side.png" data-alt="Яблоко: вид с другой стороны" aria-pressed="false" aria-label="Яблоко: вид с другой стороны"><img src="images/blender/apple-side.png" alt="" loading="lazy"></button>
+        <button type="button" class="" data-src="images/blender/apple-top.png" data-alt="Яблоко: вид сверху" aria-pressed="false" aria-label="Яблоко: вид сверху"><img src="images/blender/apple-top.png" alt="" loading="lazy"></button>
+      </div>
+      <p class="hint">Нажмите на картинку, чтобы увеличить. Ракурсы можно переключать стрелками ← →.</p>
+    </div>
+  </div>
+  <h4>Что использовал в Blender</h4>
+  <ul class="tag-list">
+    <li>Шар (сфера)</li><li>Цилиндр</li><li>Перемещение, поворот и изменение размера</li><li>Цвета и материалы</li><li>Сохранение модели для сайта (.glb)</li>
+  </ul>
+  <h4>Как я делал</h4>
+  <ol>
+    <li>Взял шар и сделал из него яблоко.</li>
+    <li>Добавил сверху тонкий цилиндр — черенок.</li>
+    <li>Покрасил яблоко в красный цвет, а черенок — в коричневый.</li>
+    <li>Сохранил модель, чтобы показать её на сайте.</li>
+  </ol>
+  <p><a class="btn secondary" href="models/my-first-apple.glb" download>Скачать модель (.glb)</a></p>
+</section>
+</main>
+
+<footer class="site-footer">
+  <p>Толеутай Амирхан · группа 2-135 W-D</p>
+  <p>© 2026 · Учебный проект: сайт создан в образовательных целях</p>
+  <p><a href="admin.html">Вход для владельца</a> · <a href="https://github.com/playboicarti1629-doc/amirkhan-site" target="_blank" rel="noopener">Код сайта на GitHub</a></p>
+</footer>
+
+<dialog id="lightbox" class="lightbox" aria-label="Увеличенное изображение">
+  <img src="" alt="">
+  <p></p>
+  <button type="button" class="btn" data-close>Закрыть</button>
+</dialog>
+<script src="js/main.js" defer></script>
+</body>
+</html>

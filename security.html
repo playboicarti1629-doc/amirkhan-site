@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Информационная безопасность — Толеутай Амирхан</title>
+  <meta name="description" content="Защита компьютера и учётных записей, антивирусы, резервное копирование и восстановление данных.">
+  <link rel="stylesheet" href="css/styles.css">
+  <script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}</script>
+</head>
+<body>
+
+<header class="site-header">
+  <button type="button" class="theme-toggle" id="themeToggle" aria-pressed="false">☾ Тёмная тема</button>
+  <h1>Информационная безопасность</h1>
+  <p>Толеутай Амирхан · Web Design · группа 2-135 W-D</p>
+</header>
+
+<button type="button" class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="siteNav">☰ Меню</button>
+<nav class="site-nav" id="siteNav" aria-label="Основное меню">
+    <a href="index.html">Главная</a>
+    <a href="safety.html">Техника безопасности</a>
+    <a href="hardware.html">Оборудование</a>
+    <a href="software.html">ОС и ПО</a>
+    <a href="security.html" class="active" aria-current="page">Информационная безопасность</a>
+    <a href="blender.html">Blender</a>
+    <a href="figma.html">Figma</a>
+    <a href="ux-ui.html">UX/UI</a>
+    <a href="html-css.html">HTML, CSS и JS</a>
+    <a href="reviews.html">Отзывы</a>
+</nav>
+
+<main class="page-content" id="content">
+<h2 class="section-title">Информационная безопасность</h2>
+<p class="intro">Защита компьютера и учётных записей, антивирусы, резервное копирование и восстановление данных. В разделе работ: <strong>17</strong>.</p>
+
+<div class="tools">
+  <label class="sr-only" for="workSearch">Поиск по работам</label>
+  <input type="search" id="workSearch" placeholder="Поиск по названию и содержанию работ…" autocomplete="off">
+  <span class="result-count" id="resultCount" aria-live="polite"></span>
+  <button type="button" class="btn secondary" id="collapseAll">Свернуть все</button>
+  <button type="button" class="btn secondary" id="expandAll">Развернуть все</button>
+</div>
+<p class="empty-message" id="emptyMessage" hidden>Ничего не найдено. Попробуйте изменить запрос.</p>
+
+<article class="entry-card" data-work>
+  <h3><span>Угрозы информационной безопасности</span><button type="button" class="toggle-btn" aria-expanded="true" aria-label="Свернуть или развернуть: Угрозы информационной безопасности">−</button></h3>
+  <div class="card-body">
+    <p class="explain">Основные угрозы и чем каждая из них опасна.</p>
+    <table class="data-table">
+      <tr><th>Угроза</th><th>Описание</th></tr>
+      <tr><td>Вирусы</td><td>Заражают файлы и программы</td></tr>
+      <tr><td>Трояны</td><td>Маскируются под полезные программы</td></tr>
+      <tr><td>Шпионское ПО</td><td>Собирает личную информацию</td></tr>
+      <tr><td>Вымогатели</td><td>Блокируют файлы и требуют деньги</td></tr>
+      <tr><td>Фишинг</td><td>Кража паролей через поддельные сайты</td></tr>
+      <tr><td>Взлом аккаунтов</td><td>Доступ к чужим учётным записям</td></tr>
+      <tr><td>Утечка данных</td><td>Распространение личной информации</td></tr>
+      <tr><td>Физические угрозы</td><td>Кража или повреждение компьютера</td></tr>
+    </table>
+  </div>
+</article>
+
+<article class="entry-card" data-work>
+  <h3><span>Способы защиты компьютера от вредоносного ПО (схема)</span><button type="button" class="toggle-btn" aria-expanded="true" aria-label="Свернуть или развернуть: Способы защиты компьютера от вредоносного ПО (схема)">−</button></h3>
+  <div class="card-body">
+    <p class="explain">Схема основных способов защиты компьютера.</p>
+    <div class="schema">
+    <img src="images/schema-zashita.png" alt="Основные способы защиты ПК от вредоносного ПО" loading="lazy">
+  </div>
+  </div>
+</article>
+
+<article class="entry-card" data-work>
+  <h3><span>Защита компьютера от вредоносного ПО</span><button type="button" class="toggle-btn" aria-expanded="true" aria-label="Свернуть или развернуть: Защита компьютера от вредоносного ПО">−</button></h3>
+  <div class="card-body">
+    <p class="explain">Десять правил, которые снижают риск заражения.</p>
+    <ol>
+      <li>Установить антивирус.</li>
+      <li>Включить брандмауэр Windows.</li>
+      <li>Регулярно обновлять систему.</li>
+      <li>Не скачивать файлы с неизвестных сайтов.</li>
+      <li>Не открывать подозрительные ссылки.</li>
+      <li>Проверять USB-накопители.</li>
+      <li>Не запускать неизвестные программы.</li>
+      <li>Работать под обычной учётной записью.</li>
+      <li>Регулярно проверять компьютер.</li>
+      <li>Делать резервные копии.</li>
+    </ol>
+  </div>
+</article>
+
+<article class="entry-card" data-work>
+  <h3><span>Сравнение антивирусных программ</span><button type="button" class="toggle-btn" aria-expanded="true" aria-label="Свернуть или развернуть: Сравнение антивирусных программ">−</button></h3>
+  <div class="card-body">
+    <p class="explain">Функции четырёх антивирусов собраны в одной таблице.</p>
+    <table class="data-table">
+      <tr><th>Функция</th><th>Kaspersky</th><th>ESET NOD32</th><th>Windows Defender</th><th>Avast</th></tr>
+      <tr><td>Защита от вирусов</td><td>Да</td><td>Да</td><td>Да</td><td>Да</td></tr>
+      <tr><td>Проверка файлов</td><td>Да</td><td>Да</td><td>Да</td><td>Да</td></tr>
+      <tr><td>Защита в реальном времени</td><td>Да</td><td>Да</td><td>Да</td><td>Да</td></tr>
+      <tr><td>Удаление вирусов</td><td>Да</td><td>Да</td><td>Да</td><td>Да</td></tr>
+      <tr><td>Защита от фишинга</td><td>Да</td><td>Да</td><td>Да</td><td>Да</td></tr>
+      <tr><td>Проверка флешек</td><td>Да</td><td>Да</td><td>Да</td><td>Да</td></tr>
+      <tr><td>Защита от шпионского ПО</td><td>Да</td><td>Да</td><td>Да</td><td>Да</td></tr>
+      <tr><td>Защита интернета</td><td>Да</td><td>Да</td><td>Да</td><td>Да</td></tr>
+      <tr><td>Брандмауэр</td><td>Да</td><td>В расширенных версиях</td><td>Да</td><td>Да</td></tr>
+    </table>
+  </div>
+</article>
+
+<article class="entry-card" data-work>
+  <h3><span>Сравнение Microsoft Defender и Kaspersky</span><button type="button" class="toggle-btn" aria-expanded="true" aria-label="Свернуть или развернуть: Сравнение Microsoft Defender и Kaspersky">−</button></h3>
+  <div class="card-body">
+    <p class="explain">Два антивируса сравниваются по набору защитных функций.</p>
+    <table class="data-table">
+      <tr><th>Функция</th><th>Microsoft Defender</th><th>Kaspersky Standard</th></tr>
+      <tr><td>Защита от вирусов</td><td>Есть</td><td>Есть</td></tr>
+      <tr><td>Проверка файлов</td><td>Есть</td><td>Есть</td></tr>
+      <tr><td>Защита в реальном времени</td><td>Есть</td><td>Есть</td></tr>
+      <tr><td>Защита от фишинга</td><td>Есть</td><td>Есть</td></tr>
+      <tr><td>Сетевой экран</td><td>Есть</td><td>Есть</td></tr>
+      <tr><td>Карантин</td><td>Есть</td><td>Есть</td></tr>
+      <tr><td>Защита от вымогателей</td><td>Есть</td><td>Есть</td></tr>
+      <tr><td>Дополнительно</td><td>SmartScreen</td><td>Оптимизация системы</td></tr>
+    </table>
+  </div>
+</article>
+
+<article class="entry-card" data-work>
+  <h3><span>Установка антивируса</span><button type="button" class="toggle-btn" aria-expanded="true" aria-label="Свернуть или развернуть: Установка антивируса">−</button></h3>
+  <div class="card-body">
+    <p class="explain">Порядок установки антивируса и первой проверки.</p>
+    <ol>
+      <li>Выбрать программу и проверить требования.</li>
+      <li>Скачать с официального сайта.</li>
+      <li>Установить, перезагрузить при необходимости.</li>
+      <li>Обновить базы, включить защиту в реальном времени.</li>
+      <li>Запустить быструю проверку.</li>
+    </ol>
+  </div>
+</article>
+
+<article class="entry-card" data-work>
+  <h3><span>Параметры настройки антивируса</span><button type="button" class="toggle-btn" aria-expanded="true" aria-label="Свернуть или развернуть: Параметры настройки антивируса">−</button></h3>
+  <div class="card-body">
+    <p class="explain">Какие параметры антивируса стоит проверить и настроить.</p>
+    <ul>
+      <li>Защита в реальном времени</li>
+      <li>Автообновление баз</li>
+      <li>Частота и тип проверки</li>
+      <li>Настройки карантина</li>
+      <li>Проверка загружаемых файлов</li>
+      <li>Защита почты и интернета</li>
+      <li>Блокировка подозрительных сайтов</li>
+      <li>Защита от программ-вымогателей</li>
+      <li>Уведомления и автоудаление угроз</li>
+    </ul>
+  </div>
+</article>
+
+<article class="entry-card" data-work>
+  <h3><span>Защита учётных записей</span><button type="button" class="toggle-btn" aria-expanded="true" aria-label="Свернуть или развернуть: Защита учётных записей">−</button></h3>
+  <div class="card-body">
+    <p class="explain">Десять правил защиты учётных записей.</p>
+    <ol>
+      <li>Сложные и уникальные пароли.</li>
+      <li>Не сообщать пароли другим.</li>
+      <li>Включить двухфакторную аутентификацию.</li>
+      <li>Не переходить по подозрительным ссылкам.</li>
+      <li>Не сохранять пароли на чужих ПК.</li>
+      <li>Использовать менеджер паролей.</li>
+      <li>Не публиковать личные данные.</li>
+      <li>Выходить из аккаунтов на чужих устройствах.</li>
+      <li>Проверять активные сеансы.</li>
+      <li>Не использовать один пароль везде.</li>
+    </ol>
+  </div>
+</article>
+
+<article class="entry-card" data-work>
+  <h3><span>Настройка многофакторной аутентификации</span><button type="button" class="toggle-btn" aria-expanded="true" aria-label="Свернуть или развернуть: Настройка многофакторной аутентификации">−</button></h3>
+  <div class="card-body">
+    <p class="explain">Как включить двухфакторную аутентификацию в учётной записи.</p>
+    <ol>
+      <li>Настройки учётной записи → Безопасность.</li>
+      <li>Найти «Двухфакторная аутентификация».</li>
+      <li>Выбрать способ подтверждения.</li>
+      <li>Подключить приложение или телефон.</li>
+      <li>Подтвердить кодом и сохранить резервные коды.</li>
+      <li>Проверить вход.</li>
+    </ol>
+  </div>
+</article>
+
+<article class="entry-card" data-work>
+  <h3><span>Безопасное хранение данных в облаке</span><button type="button" class="toggle-btn" aria-expanded="true" aria-label="Свернуть или развернуть: Безопасное хранение данных в облаке">−</button></h3>
+  <div class="card-body">
+    <p class="explain">Правила, которые защищают файлы в облачном хранилище.</p>
+    <ol>
+      <li>Известные сервисы + сложный пароль + 2FA.</li>
+      <li>Не передавать ссылки с доступом посторонним.</li>
+      <li>Проверять настройки общего доступа.</li>
+      <li>Не загружать конфиденциальные документы в открытые папки.</li>
+      <li>Шифровать важные файлы.</li>
+      <li>Проверять синхронизацию.</li>
+      <li>Использовать официальные приложения.</li>
+    </ol>
+  </div>
+</article>
+
+<article class="entry-card" data-work>
+  <h3><span>Программы резервного копирования</span><button type="button" class="toggle-btn" aria-expanded="true" aria-label="Свернуть или развернуть: Программы резервного копирования">−</button></h3>
+  <div class="card-body">
+    <p class="explain">Программы и встроенные средства Windows для резервных копий.</p>
+    <ul>
+      <li>Acronis Cyber Protect - файлы, диски, система</li>
+      <li>AOMEI Backupper - файлы, папки, ОС</li>
+      <li>Veeam Agent - восстановление после сбоев</li>
+      <li>EaseUS Todo Backup - автоматические копии</li>
+      <li>Macrium Reflect - копии дисков</li>
+      <li>Duplicati - копирование в облако с шифрованием</li>
+      <li>Windows File History - копии личных файлов</li>
+      <li>Windows Backup - настройки в облаке</li>
+    </ul>
+  </div>
+</article>
+
+<article class="entry-card" data-work>
+  <h3><span>План резервного копирования</span><button type="button" class="toggle-btn" aria-expanded="true" aria-label="Свернуть или развернуть: План резервного копирования">−</button></h3>
+  <div class="card-body">
+    <p class="explain">Восемь шагов, из которых складывается план регулярных копий.</p>
+    <ol>
+      <li>Определить важные файлы.</li>
+      <li>Выбрать место хранения.</li>
+      <li>Создать папку для копий.</li>
+      <li>Скопировать документы и фото.</li>
+      <li>Настроить автоматическое копирование.</li>
+      <li>Делать копии регулярно.</li>
+      <li>Хранить копию отдельно от компьютера.</li>
+      <li>Проверять возможность восстановления.</li>
+    </ol>
+  </div>
+</article>
+
+<article class="entry-card" data-work>
+  <h3><span>Носители для резервных копий</span><button type="button" class="toggle-btn" aria-expanded="true" aria-label="Свернуть или развернуть: Носители для резервных копий">−</button></h3>
+  <div class="card-body">
+    <p class="explain">Шесть типов носителей сравниваются по плюсам и минусам.</p>
+    <table class="data-table">
+      <tr><th>Носитель</th><th>Плюсы</th><th>Минусы</th></tr>
+      <tr><td>HDD</td><td>Большой объём, низкая цена</td><td>Чувствителен к ударам</td></tr>
+      <tr><td>SSD</td><td>Высокая скорость</td><td>Дороже</td></tr>
+      <tr><td>USB-флешка</td><td>Удобно переносить</td><td>Легко потерять</td></tr>
+      <tr><td>DVD</td><td>Не нужен интернет</td><td>Маленький объём</td></tr>
+      <tr><td>Облако</td><td>Доступ из разных мест</td><td>Нужен интернет</td></tr>
+      <tr><td>NAS</td><td>Большие объёмы</td><td>Дорогое оборудование</td></tr>
+    </table>
+  </div>
+</article>
+
+<article class="entry-card" data-work>
+  <h3><span>Восстановление данных</span><button type="button" class="toggle-btn" aria-expanded="true" aria-label="Свернуть или развернуть: Восстановление данных">−</button></h3>
+  <div class="card-body">
+    <p class="explain">Способы вернуть файлы: от корзины до специализированного сервиса.</p>
+    <ol>
+      <li>Корзина Windows - недавно удалённые файлы.</li>
+      <li>Резервная копия - из заранее сохранённой копии.</li>
+      <li>История файлов - предыдущие версии.</li>
+      <li>Точка восстановления - системные настройки.</li>
+      <li>Программы восстановления (Recuva, PhotoRec).</li>
+      <li>Специализированный сервис - при физическом повреждении.</li>
+    </ol>
+    <p class="warn">Прекратите запись на повреждённый накопитель.</p>
+  </div>
+</article>
+
+<article class="entry-card" data-work>
+  <h3><span>Восстановление операционной системы</span><button type="button" class="toggle-btn" aria-expanded="true" aria-label="Свернуть или развернуть: Восстановление операционной системы">−</button></h3>
+  <div class="card-body">
+    <p class="explain">Пять способов восстановить систему — от простых к крайним.</p>
+    <ol>
+      <li>Точка восстановления.</li>
+      <li>Восстановление при загрузке.</li>
+      <li>Проверка системных файлов: <code>sfc /scannow</code>.</li>
+      <li>Сброс Windows (с сохранением файлов).</li>
+      <li>Загрузочная флешка - восстановление или переустановка.</li>
+    </ol>
+    <p class="note">Сначала простые способы. Переустановку - только если остальное не помогло.</p>
+  </div>
+</article>
+
+<article class="entry-card" data-work>
+  <h3><span>Действия при потере данных</span><button type="button" class="toggle-btn" aria-expanded="true" aria-label="Свернуть или развернуть: Действия при потере данных">−</button></h3>
+  <div class="card-body">
+    <p class="explain">Порядок действий, который не даёт потерять данные окончательно.</p>
+    <ol>
+      <li>Прекратить работу с повреждённым накопителем.</li>
+      <li>Не записывать на него новые файлы.</li>
+      <li>Проверить корзину и резервные копии.</li>
+      <li>Попробовать восстановить предыдущую версию.</li>
+      <li>Использовать программу восстановления.</li>
+      <li>Сохранить восстановленное на другой носитель.</li>
+      <li>Проверить целостность и создать новую копию.</li>
+    </ol>
+  </div>
+</article>
+
+<article class="entry-card" data-work>
+  <h3><span>Алгоритм защиты данных и действий при проблеме (схема)</span><button type="button" class="toggle-btn" aria-expanded="true" aria-label="Свернуть или развернуть: Алгоритм защиты данных и действий при проблеме (схема)">−</button></h3>
+  <div class="card-body">
+    <p class="explain">Схема связывает защиту данных и порядок действий при проблеме.</p>
+    <div class="schema">
+    <img src="images/schema-algoritm.png" alt="Алгоритм защиты данных и восстановления" loading="lazy">
+  </div>
+  </div>
+</article>
+</main>
+
+<footer class="site-footer">
+  <p>Толеутай Амирхан · группа 2-135 W-D</p>
+  <p>© 2026 · Учебный проект: сайт создан в образовательных целях</p>
+  <p><a href="admin.html">Вход для владельца</a> · <a href="https://github.com/playboicarti1629-doc/amirkhan-site" target="_blank" rel="noopener">Код сайта на GitHub</a></p>
+</footer>
+
+<dialog id="lightbox" class="lightbox" aria-label="Увеличенное изображение">
+  <img src="" alt="">
+  <p></p>
+  <button type="button" class="btn" data-close>Закрыть</button>
+</dialog>
+<script src="js/main.js" defer></script>
+</body>
+</html>

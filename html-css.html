@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Технологии сайта — Толеутай Амирхан</title>
+  <meta name="description" content="Какие HTML-элементы, CSS-свойства и JavaScript-функции использованы на сайте.">
+  <link rel="stylesheet" href="css/styles.css">
+  <script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}</script>
+</head>
+<body>
+
+<header class="site-header">
+  <button type="button" class="theme-toggle" id="themeToggle" aria-pressed="false">☾ Тёмная тема</button>
+  <h1>HTML, CSS и JavaScript</h1>
+  <p>Толеутай Амирхан · Web Design · группа 2-135 W-D</p>
+</header>
+
+<button type="button" class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="siteNav">☰ Меню</button>
+<nav class="site-nav" id="siteNav" aria-label="Основное меню">
+    <a href="index.html">Главная</a>
+    <a href="safety.html">Техника безопасности</a>
+    <a href="hardware.html">Оборудование</a>
+    <a href="software.html">ОС и ПО</a>
+    <a href="security.html">Информационная безопасность</a>
+    <a href="blender.html">Blender</a>
+    <a href="figma.html">Figma</a>
+    <a href="ux-ui.html">UX/UI</a>
+    <a href="html-css.html" class="active" aria-current="page">HTML, CSS и JS</a>
+    <a href="reviews.html">Отзывы</a>
+</nav>
+
+<main class="page-content" id="content">
+<h2 class="section-title">Технологии сайта</h2>
+<p class="intro">Сайт написан на чистых HTML, CSS и JavaScript без конструкторов. Разметка, стили и скрипты лежат в отдельных файлах: страницы <code>*.html</code>, стили <code>css/styles.css</code>, скрипты в папке <code>js/</code>. Данные отзывов хранятся в базе Supabase. Ниже — 16 групп HTML-элементов, 12 CSS-свойств и 6 функций JavaScript с кусочками кода из самого сайта.</p>
+
+<h2 class="section-title">HTML-элементы</h2>
+<article class="entry-card" data-work>
+  <h3><span>&lt;header&gt;</span></h3>
+  <p class="explain">Шапка страницы: заголовок и подпись автора.</p>
+  <pre class="code-block"><code>&lt;header class=&quot;site-header&quot;&gt;</code></pre>
+</article>
+<article class="entry-card" data-work>
+  <h3><span>&lt;nav&gt;</span></h3>
+  <p class="explain">Блок навигации по разделам сайта.</p>
+  <pre class="code-block"><code>&lt;nav class=&quot;site-nav&quot; id=&quot;siteNav&quot; aria-label=&quot;Основное меню&quot;&gt;</code></pre>
+</article>
+<article class="entry-card" data-work>
+  <h3><span>&lt;main&gt;</span></h3>
+  <p class="explain">Основное содержимое страницы, уникальное для неё.</p>
+  <pre class="code-block"><code>&lt;main class=&quot;page-content&quot; id=&quot;content&quot;&gt;</code></pre>
+</article>
+<article class="entry-card" data-work>
+  <h3><span>&lt;article&gt;</span></h3>
+  <p class="explain">Самостоятельный блок: карточка с работой.</p>
+  <pre class="code-block"><code>&lt;article class=&quot;entry-card&quot; data-work&gt;</code></pre>
+</article>
+<article class="entry-card" data-work>
+  <h3><span>&lt;h1–h3&gt;</span></h3>
+  <p class="explain">Заголовки трёх уровней: страница, раздел, карточка.</p>
+  <pre class="code-block"><code>&lt;h2 class=&quot;section-title&quot;&gt;</code></pre>
+</article>
+<article class="entry-card" data-work>
+  <h3><span>&lt;table, tr, th, td&gt;</span></h3>
+  <p class="explain">Таблицы для сравнений и результатов.</p>
+  <pre class="code-block"><code>&lt;tr&gt;&lt;th&gt;Критерий&lt;/th&gt;&lt;th&gt;Windows&lt;/th&gt;&lt;th&gt;macOS&lt;/th&gt;&lt;th&gt;Linux&lt;/th&gt;&lt;/tr&gt;</code></pre>
+</article>
+<article class="entry-card" data-work>
+  <h3><span>&lt;ol, ul, li&gt;</span></h3>
+  <p class="explain">Нумерованные и маркированные списки шагов и правил.</p>
+  <pre class="code-block"><code>&lt;li&gt;Скачать ISO с официального сайта.&lt;/li&gt;</code></pre>
+</article>
+<article class="entry-card" data-work>
+  <h3><span>&lt;img&gt;</span></h3>
+  <p class="explain">Схемы и скриншоты; alt-текст описывает картинку.</p>
+  <pre class="code-block"><code>&lt;img src=&quot;images/schema-zashita.png&quot; alt=&quot;Основные способы защиты ПК от вредоносного ПО&quot; loading=&quot;lazy&quot;&gt;</code></pre>
+</article>
+<article class="entry-card" data-work>
+  <h3><span>&lt;form&gt;</span></h3>
+  <p class="explain">Форма отзыва, данные из которой уходят в базу.</p>
+  <pre class="code-block"><code>&lt;form class=&quot;form-card&quot; id=&quot;reviewForm&quot; novalidate&gt;</code></pre>
+</article>
+<article class="entry-card" data-work>
+  <h3><span>&lt;input, label&gt;</span></h3>
+  <p class="explain">Поле ввода и подпись к нему.</p>
+  <pre class="code-block"><code>&lt;input type=&quot;email&quot; id=&quot;email&quot; name=&quot;email&quot; required maxlength=&quot;100&quot; autocomplete=&quot;email&quot;&gt;</code></pre>
+</article>
+<article class="entry-card" data-work>
+  <h3><span>&lt;select, textarea&gt;</span></h3>
+  <p class="explain">Выпадающий список темы и поле для текста отзыва.</p>
+  <pre class="code-block"><code>&lt;textarea id=&quot;message&quot; name=&quot;message&quot; required maxlength=&quot;500&quot; rows=&quot;5&quot;&gt;&lt;/textarea&gt;</code></pre>
+</article>
+<article class="entry-card" data-work>
+  <h3><span>&lt;button&gt;</span></h3>
+  <p class="explain">Кнопки отправки формы, смены темы, сворачивания.</p>
+  <pre class="code-block"><code>&lt;button type=&quot;submit&quot; class=&quot;btn&quot;&gt;Отправить отзыв&lt;/button&gt;</code></pre>
+</article>
+<article class="entry-card" data-work>
+  <h3><span>&lt;dialog&gt;</span></h3>
+  <p class="explain">Модальное окно для увеличения картинки.</p>
+  <pre class="code-block"><code>&lt;dialog id=&quot;lightbox&quot; class=&quot;lightbox&quot; aria-label=&quot;Увеличенное изображение&quot;&gt;</code></pre>
+</article>
+<article class="entry-card" data-work>
+  <h3><span>&lt;model-viewer&gt;</span></h3>
+  <p class="explain">Подключаемый элемент для просмотра 3D-моделей.</p>
+  <pre class="code-block"><code>&lt;model-viewer src=&quot;models/my-car.glb&quot;</code></pre>
+</article>
+<article class="entry-card" data-work>
+  <h3><span>&lt;footer&gt;</span></h3>
+  <p class="explain">Подвал: автор, группа, год и подпись об учебном проекте.</p>
+  <pre class="code-block"><code>&lt;footer class=&quot;site-footer&quot;&gt;</code></pre>
+</article>
+<article class="entry-card" data-work>
+  <h3><span>&lt;a&gt;</span></h3>
+  <p class="explain">Ссылки между страницами и на внешние ресурсы.</p>
+  <pre class="code-block"><code>&lt;a href=&quot;blender.html&quot;&gt;Blender&lt;/a&gt;</code></pre>
+</article>
+
+<h2 class="section-title">CSS-свойства</h2>
+<article class="entry-card" data-work>
+  <h3><span>display: flex</span></h3>
+  <p class="explain">Располагает элементы в строку с переносом; на нём построено меню.</p>
+  <p><strong>Как повлияло на сайт:</strong> Пункты меню выстраиваются в центре, а на узком экране переносятся на новую строку.</p>
+  <pre class="code-block"><code>.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 11px;</code></pre>
+</article>
+<article class="entry-card" data-work>
+  <h3><span>display: grid</span></h3>
+  <p class="explain">Делит блок на колонки; нужен для адаптивной сетки карточек.</p>
+  <p><strong>Как повлияло на сайт:</strong> Карточки разделов сами подбирают число колонок под ширину экрана.</p>
+  <pre class="code-block"><code>.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;</code></pre>
+</article>
+<article class="entry-card" data-work>
+  <h3><span>box-shadow</span></h3>
+  <p class="explain">Рисует тень; здесь — жёсткая «нео-брутальная» тень без размытия.</p>
+  <p><strong>Как повлияло на сайт:</strong> Карточки и кнопки выглядят приподнятыми над страницей.</p>
+  <pre class="code-block"><code>--shadow-small: 4px 4px 0 var(--ink);</code></pre>
+<pre class="code-block"><code>box-shadow: var(--shadow-small);</code></pre>
+</article>
+<article class="entry-card" data-work>
+  <h3><span>border</span></h3>
+  <p class="explain">Задаёт рамку элемента.</p>
+  <p><strong>Как повлияло на сайт:</strong> Толстая чёрная рамка стала главной чертой стиля и отделяет блоки друг от друга.</p>
+  <pre class="code-block"><code>--line: 3px solid var(--ink);</code></pre>
+<pre class="code-block"><code>border: var(--line);</code></pre>
+</article>
+<article class="entry-card" data-work>
+  <h3><span>transition и transform</span></h3>
+  <p class="explain">Плавно меняют положение элемента при наведении.</p>
+  <p><strong>Как повлияло на сайт:</strong> Карточка сдвигается вверх-влево при наведении — это обратная связь для пользователя.</p>
+  <pre class="code-block"><code>transition: transform .12s ease, box-shadow .12s ease;</code></pre>
+<pre class="code-block"><code>.entry-card:hover { transform: translate(-2px, -2px); box-shadow: 6px 6px 0 var(--ink); }</code></pre>
+</article>
+<article class="entry-card" data-work>
+  <h3><span>Пользовательские свойства (--)</span></h3>
+  <p class="explain">Хранят значения, которые можно переиспользовать, в том числе для тёмной темы.</p>
+  <p><strong>Как повлияло на сайт:</strong> Цвета объявлены один раз; тёмная тема просто подменяет их.</p>
+  <pre class="code-block"><code>--yellow: #FFDE59;</code></pre>
+<pre class="code-block"><code>[data-theme=&quot;dark&quot;] {
+  color-scheme: dark;
+  --paper: #15161a;</code></pre>
+</article>
+<article class="entry-card" data-work>
+  <h3><span>clamp()</span></h3>
+  <p class="explain">Ограничивает размер значением «минимум — желаемое — максимум».</p>
+  <p><strong>Как повлияло на сайт:</strong> Заголовок плавно становится больше или меньше вместе с шириной окна.</p>
+  <pre class="code-block"><code>font-size: clamp(25px, 4vw, 42px);</code></pre>
+</article>
+<article class="entry-card" data-work>
+  <h3><span>@media</span></h3>
+  <p class="explain">Применяет правила только при нужных условиях, например на узком экране.</p>
+  <p><strong>Как повлияло на сайт:</strong> Для телефонов меняются отступы и размер шрифта.</p>
+  <pre class="code-block"><code>@media (max-width: 700px) {
+  body { padding: 18px 12px 34px; font-size: 15px; }</code></pre>
+</article>
+<article class="entry-card" data-work>
+  <h3><span>position: absolute</span></h3>
+  <p class="explain">Помещает элемент в заданное место внутри родителя.</p>
+  <p><strong>Как повлияло на сайт:</strong> Кнопка смены темы закреплена в правом верхнем углу шапки.</p>
+  <pre class="code-block"><code>.theme-toggle {
+  position: absolute;
+  top: 12px;
+  right: 12px;</code></pre>
+</article>
+<article class="entry-card" data-work>
+  <h3><span>overflow-x</span></h3>
+  <p class="explain">Управляет тем, что происходит с содержимым, не помещающимся по ширине.</p>
+  <p><strong>Как повлияло на сайт:</strong> Широкая таблица в админ-панели прокручивается, а не ломает страницу.</p>
+  <pre class="code-block"><code>.admin-table-wrap { overflow-x: auto; margin: 0 0 30px; }</code></pre>
+</article>
+<article class="entry-card" data-work>
+  <h3><span>background-image</span></h3>
+  <p class="explain">Рисует фон-картинку или градиент.</p>
+  <p><strong>Как повлияло на сайт:</strong> Фон страницы — точечная сетка из радиального градиента, без картинок.</p>
+  <pre class="code-block"><code>background-image: radial-gradient(var(--dot) 0.8px, transparent 0.8px);
+  background-size: 17px 17px;</code></pre>
+</article>
+<article class="entry-card" data-work>
+  <h3><span>text-transform</span></h3>
+  <p class="explain">Меняет регистр букв без изменения текста в HTML.</p>
+  <p><strong>Как повлияло на сайт:</strong> Главный заголовок отображается прописными буквами.</p>
+  <pre class="code-block"><code>font-weight: 900;
+  letter-spacing: -.04em;
+  text-transform: uppercase;</code></pre>
+</article>
+
+<h2 class="section-title">JavaScript и интерактивность</h2>
+<article class="entry-card" data-work>
+  <h3><span>Переключение светлой и тёмной темы</span></h3>
+  <p class="explain">Кнопка в шапке меняет атрибут data-theme у страницы, а выбор сохраняется в браузере.</p>
+  <pre class="code-block"><code>document.documentElement.setAttribute(&#x27;data-theme&#x27;, theme);</code></pre>
+</article>
+<article class="entry-card" data-work>
+  <h3><span>Поиск работ по названию и тексту</span></h3>
+  <p class="explain">Скрывает карточки, где нет введённой фразы, подсвечивает совпадения и показывает счётчик.</p>
+  <pre class="code-block"><code>card.hidden = !match;</code></pre>
+</article>
+<article class="entry-card" data-work>
+  <h3><span>Показ и скрытие содержимого карточек</span></h3>
+  <p class="explain">Кнопки «−/+» и «Свернуть все» меняют состояние карточек.</p>
+  <pre class="code-block"><code>card.classList.toggle(&#x27;collapsed&#x27;, collapsed);</code></pre>
+</article>
+<article class="entry-card" data-work>
+  <h3><span>Окно с увеличенным изображением</span></h3>
+  <p class="explain">Нажатие на схему или скриншот открывает его в модальном окне.</p>
+  <pre class="code-block"><code>dlg.showModal();</code></pre>
+</article>
+<article class="entry-card" data-work>
+  <h3><span>Галерея ракурсов модели</span></h3>
+  <p class="explain">Миниатюры переключают главное изображение; работают и стрелки на клавиатуре.</p>
+  <pre class="code-block"><code>main.src = src;</code></pre>
+</article>
+<article class="entry-card" data-work>
+  <h3><span>Форма отзывов с проверкой и базой данных</span></h3>
+  <p class="explain">Проверяет поля, сохраняет отзыв в Supabase, показывает уведомление и очищает форму.</p>
+  <pre class="code-block"><code>window.DB.client.from(&#x27;reviews&#x27;).insert([result.clean])</code></pre>
+</article>
+</main>
+
+<footer class="site-footer">
+  <p>Толеутай Амирхан · группа 2-135 W-D</p>
+  <p>© 2026 · Учебный проект: сайт создан в образовательных целях</p>
+  <p><a href="admin.html">Вход для владельца</a> · <a href="https://github.com/playboicarti1629-doc/amirkhan-site" target="_blank" rel="noopener">Код сайта на GitHub</a></p>
+</footer>
+
+<div class="toast-area" id="toastArea" aria-live="polite"></div>
+<script src="js/main.js" defer></script>
+</body>
+</html>

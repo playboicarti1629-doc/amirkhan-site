@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Панель владельца — Толеутай Амирхан</title>
+  <meta name="description" content="Управление отзывами (только для владельца).">
+  <meta name="robots" content="noindex">
+  <link rel="stylesheet" href="css/styles.css">
+  <script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}</script>
+</head>
+<body>
+
+<header class="site-header">
+  <button type="button" class="theme-toggle" id="themeToggle" aria-pressed="false">☾ Тёмная тема</button>
+  <h1>Панель владельца</h1>
+  <p>Толеутай Амирхан · Web Design · группа 2-135 W-D</p>
+</header>
+
+<button type="button" class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="siteNav">☰ Меню</button>
+<nav class="site-nav" id="siteNav" aria-label="Основное меню">
+    <a href="index.html">Главная</a>
+    <a href="safety.html">Техника безопасности</a>
+    <a href="hardware.html">Оборудование</a>
+    <a href="software.html">ОС и ПО</a>
+    <a href="security.html">Информационная безопасность</a>
+    <a href="blender.html">Blender</a>
+    <a href="figma.html">Figma</a>
+    <a href="ux-ui.html">UX/UI</a>
+    <a href="html-css.html">HTML, CSS и JS</a>
+    <a href="reviews.html">Отзывы</a>
+</nav>
+
+<main class="page-content" id="content">
+<h2 class="section-title">Панель владельца</h2>
+
+<section id="loginBox" class="form-card" hidden>
+  <p class="intro">Эта страница предназначена только для владельца сайта. Войдите, чтобы просматривать, добавлять, изменять и удалять отзывы.</p>
+  <form id="loginForm" novalidate>
+    <div class="form-row">
+      <label for="loginEmail">Почта</label>
+      <input type="email" id="loginEmail" name="email" autocomplete="username" required>
+    </div>
+    <div class="form-row">
+      <label for="loginPassword">Пароль</label>
+      <input type="password" id="loginPassword" name="password" autocomplete="current-password" required>
+    </div>
+    <p class="field-error" id="loginStatus" role="alert"></p>
+    <button type="submit" class="btn">Войти</button>
+  </form>
+</section>
+
+<section id="adminPanel" hidden>
+  <div class="tools">
+    <button type="button" class="btn" id="addBtn">+ Добавить запись</button>
+    <button type="button" class="btn secondary" id="logoutBtn">Выйти</button>
+  </div>
+  <p class="empty-message" id="adminStatus" hidden></p>
+  <div class="admin-table-wrap">
+    <table class="data-table admin-table">
+      <thead><tr><th>№</th><th>Дата</th><th>Имя</th><th>Почта</th><th>Тема</th><th>Оценка</th><th>Отзыв</th><th>Действия</th></tr></thead>
+      <tbody id="adminRows"></tbody>
+    </table>
+  </div>
+</section>
+
+<dialog id="editDialog" aria-labelledby="editTitle">
+  <h3 id="editTitle">Запись</h3>
+  <form id="editForm" novalidate>
+      <div class="form-row">
+        <label for="e_name">Имя <span class="req">*</span></label>
+        <input type="text" id="e_name" name="name" required minlength="2" maxlength="50" autocomplete="given-name">
+        <p class="field-error" data-error-for="name" role="alert"></p>
+      </div>
+      <div class="form-row">
+        <label for="e_email">Электронная почта <span class="req">*</span></label>
+        <input type="email" id="e_email" name="email" required maxlength="100" autocomplete="email">
+        <p class="hint">Почта видна только владельцу сайта и нигде не публикуется.</p>
+        <p class="field-error" data-error-for="email" role="alert"></p>
+      </div>
+      <div class="form-row">
+        <label for="e_category">О чём отзыв <span class="req">*</span></label>
+        <select id="e_category" name="category" required>
+          <option value="">— выберите тему —</option>
+          <option>Работы по информатике</option>
+          <option>Blender</option>
+          <option>Figma</option>
+          <option>Дизайн сайта</option>
+          <option>Другое</option>
+        </select>
+        <p class="field-error" data-error-for="category" role="alert"></p>
+      </div>
+      <div class="form-row">
+        <fieldset class="rating-group" style="border:0;padding:0;margin:0">
+          <legend class="label">Оценка <span class="req">*</span></legend>
+          <label><input type="radio" name="rating" value="1" required> 1</label>
+          <label><input type="radio" name="rating" value="2" > 2</label>
+          <label><input type="radio" name="rating" value="3" > 3</label>
+          <label><input type="radio" name="rating" value="4" > 4</label>
+          <label><input type="radio" name="rating" value="5" > 5</label>
+        </fieldset>
+        <p class="field-error" data-error-for="rating" role="alert"></p>
+      </div>
+      <div class="form-row">
+        <label for="e_message">Отзыв <span class="req">*</span></label>
+        <textarea id="e_message" name="message" required maxlength="500" rows="5"></textarea>
+        <p class="counter" data-counter-for="message"></p>
+        <p class="field-error" data-error-for="message" role="alert"></p>
+      </div>
+      <div class="form-row">
+        <label for="e_suggestion">Предложение по улучшению <span class="opt">(необязательно)</span></label>
+        <textarea id="e_suggestion" name="suggestion" maxlength="300" rows="3"></textarea>
+        <p class="counter" data-counter-for="suggestion"></p>
+        <p class="field-error" data-error-for="suggestion" role="alert"></p>
+      </div>
+    <div class="dialog-actions">
+      <button type="submit" class="btn">Сохранить</button>
+      <button type="button" class="btn secondary" data-cancel>Отмена</button>
+    </div>
+  </form>
+</dialog>
+
+<dialog id="confirmDialog" aria-labelledby="confirmText">
+  <p id="confirmText"></p>
+  <div class="dialog-actions">
+    <button type="button" class="btn danger" id="confirmYes">Да, удалить</button>
+    <button type="button" class="btn secondary" data-cancel>Отмена</button>
+  </div>
+</dialog>
+</main>
+
+<footer class="site-footer">
+  <p>Толеутай Амирхан · группа 2-135 W-D</p>
+  <p>© 2026 · Учебный проект: сайт создан в образовательных целях</p>
+  <p><a href="admin.html">Вход для владельца</a> · <a href="https://github.com/playboicarti1629-doc/amirkhan-site" target="_blank" rel="noopener">Код сайта на GitHub</a></p>
+</footer>
+
+<div class="toast-area" id="toastArea" aria-live="polite"></div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="js/config.js"></script>
+<script src="js/db.js"></script>
+<script src="js/main.js" defer></script>
+<script src="js/admin.js" defer></script>
+</body>
+</html>

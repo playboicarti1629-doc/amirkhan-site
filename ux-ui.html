@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Принципы UX/UI — Толеутай Амирхан</title>
+  <meta name="description" content="Восемь принципов UX/UI и примеры их применения в портфолио.">
+  <link rel="stylesheet" href="css/styles.css">
+  <script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}</script>
+</head>
+<body>
+
+<header class="site-header">
+  <button type="button" class="theme-toggle" id="themeToggle" aria-pressed="false">☾ Тёмная тема</button>
+  <h1>Принципы UX/UI</h1>
+  <p>Толеутай Амирхан · Web Design · группа 2-135 W-D</p>
+</header>
+
+<button type="button" class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="siteNav">☰ Меню</button>
+<nav class="site-nav" id="siteNav" aria-label="Основное меню">
+    <a href="index.html">Главная</a>
+    <a href="safety.html">Техника безопасности</a>
+    <a href="hardware.html">Оборудование</a>
+    <a href="software.html">ОС и ПО</a>
+    <a href="security.html">Информационная безопасность</a>
+    <a href="blender.html">Blender</a>
+    <a href="figma.html">Figma</a>
+    <a href="ux-ui.html" class="active" aria-current="page">UX/UI</a>
+    <a href="html-css.html">HTML, CSS и JS</a>
+    <a href="reviews.html">Отзывы</a>
+</nav>
+
+<main class="page-content" id="content">
+<h2 class="section-title">Принципы UX/UI в моих работах</h2>
+<p class="intro">Ниже описаны восемь принципов, которые я применил при создании этого портфолио. Для каждого указано, зачем он нужен, как именно я его использовал, и показан живой пример прямо с сайта.</p>
+
+<article class="entry-card" data-work>
+  <h3><span>1. Визуальная иерархия</span></h3>
+  <p><strong>Для чего:</strong> Чтобы посетитель сразу видел, что главное, а что второстепенное, и читал страницу в нужном порядке.</p>
+  <p><strong>Как применено у меня:</strong> Название страницы самое крупное и стоит на жёлтом блоке. Заголовки разделов поменьше, на тёмной плашке, а заголовки карточек ещё скромнее. Чем меньше важность, тем меньше и тоньше шрифт.</p>
+  <div class="example-box"><p class="label">Пример с этого сайта</p>
+    <h4 style="margin:0 0 6px;font-size:19px">Заголовок карточки (уровень 3)</h4>
+    <p class="explain">Пояснение к работе — мельче и на отдельном фоне.</p>
+    <p class="hint">Служебный текст — самый маленький и бледный.</p>
+  </div>
+</article>
+
+<article class="entry-card" data-work>
+  <h3><span>2. Контрастность</span></h3>
+  <p><strong>Для чего:</strong> Чтобы текст было легко читать. Чем сильнее цвет текста отличается от цвета фона, тем лучше его видно. А яркие цвета помогают выделить важное.</p>
+  <p><strong>Как применено у меня:</strong> На светлых карточках у меня чёрный текст, а вокруг толстые чёрные рамки. Яркие жёлтый, зелёный и коралловый цвета я использую для важных мест: шапки, подвала, кнопок и примечаний. В тёмной теме фон становится тёмным, а текст светлым, поэтому читать всё равно удобно.</p>
+  <div class="example-box"><p class="label">Пример с этого сайта</p>
+    <div class="swatches">
+      <div class="swatch" style="background:#FFFDF7;color:#111111">Текст на карточке</div>
+      <div class="swatch" style="background:#FFDE59;color:#111111">Текст на жёлтой шапке</div>
+      <div class="swatch" style="background:#7ED957;color:#111111">Текст на зелёном подвале</div>
+      <div class="swatch" style="background:#20222A;color:#F2EFE6">Текст на карточке в тёмной теме</div>
+    </div>
+  </div>
+</article>
+
+<article class="entry-card" data-work>
+  <h3><span>3. Единообразие элементов</span></h3>
+  <p><strong>Для чего:</strong> Чтобы посетителю не приходилось заново разбираться в интерфейсе на каждой странице: одинаковые вещи выглядят и работают одинаково.</p>
+  <p><strong>Как применено у меня:</strong> Все страницы используют один файл стилей. Карточки, кнопки, таблицы, шапка и подвал везде одной формы, с одинаковыми рамками и тенями. Предупреждения всегда красные, примечания — бирюзовые.</p>
+  <div class="example-box"><p class="label">Пример с этого сайта</p>
+    <p><a class="btn" href="#content">Кнопка</a> <span class="note">Примечание</span></p>
+    <p class="warn">Предупреждение выглядит одинаково везде.</p>
+  </div>
+</article>
+
+<article class="entry-card" data-work>
+  <h3><span>4. Удобная навигация</span></h3>
+  <p><strong>Для чего:</strong> Чтобы из любого места сайта можно было за один клик перейти в нужный раздел и понять, где ты находишься.</p>
+  <p><strong>Как применено у меня:</strong> Меню одинаковое на всех страницах, текущий раздел подсвечен жёлтым. Работы разложены по четырём темам, а внутри раздела есть поиск и кнопки «Свернуть все» и «Развернуть все». На телефоне меню прячется за кнопкой «Меню».</p>
+  <div class="example-box"><p class="label">Пример с этого сайта</p>
+    <p>Посмотрите на меню в верхней части этой страницы: пункт «UX/UI» подсвечен.</p>
+  </div>
+</article>
+
+<article class="entry-card" data-work>
+  <h3><span>5. Читаемость текста</span></h3>
+  <p><strong>Для чего:</strong> Чтобы текст можно было читать без напряжения на любом экране.</p>
+  <p><strong>Как применено у меня:</strong> Шрифт обычный, без засечек, не слишком мелкий, строки не слипаются друг с другом. Код я выделил отдельным шрифтом на своём фоне, а длинные таблицы на телефоне можно листать в сторону.</p>
+  <div class="example-box"><p class="label">Пример с этого сайта</p>
+    <p>Обычный текст читается спокойно, а код выглядит так: <code>display: flex;</code></p>
+  </div>
+</article>
+
+<article class="entry-card" data-work>
+  <h3><span>6. Обратная связь при взаимодействии</span></h3>
+  <p><strong>Для чего:</strong> Чтобы пользователь всегда понимал, что система приняла его действие.</p>
+  <p><strong>Как применено у меня:</strong> Кнопки и карточки смещаются при наведении и нажатии, у полей формы есть подсветка ошибок и подсказки под ними, после отправки отзыва появляется уведомление, а при поиске работ показывается счётчик найденного.</p>
+  <div class="example-box"><p class="label">Пример с этого сайта</p>
+    <p><button type="button" class="btn" data-demo-toast>Показать уведомление</button></p>
+  </div>
+</article>
+
+<article class="entry-card" data-work>
+  <h3><span>7. Адаптивность интерфейса</span></h3>
+  <p><strong>Для чего:</strong> Чтобы сайт одинаково удобно открывался на компьютере и на смартфоне.</p>
+  <p><strong>Как применено у меня:</strong> Блоки сами перестраиваются под ширину экрана, картинки не вылезают за края, а на телефоне меню прячется за кнопку. Для маленьких экранов я отдельно прописал стили в CSS.</p>
+  <div class="example-box"><p class="label">Пример с этого сайта</p>
+    <p>Уменьшите окно браузера: сетка карточек перестроится, а меню превратится в кнопку.</p>
+  </div>
+</article>
+
+<article class="entry-card" data-work>
+  <h3><span>8. Логическая группировка информации</span></h3>
+  <p><strong>Для чего:</strong> Чтобы связанные материалы лежали рядом и их было легко найти.</p>
+  <p><strong>Как применено у меня:</strong> Все работы по информатике разделены на четыре темы. Внутри раздела карточки идут от общего к частному: например, сначала состав компьютера, потом подбор сборок, потом диагностика и ремонт.</p>
+  <div class="example-box"><p class="label">Пример с этого сайта</p>
+    <p>Попробуйте раздел <a href="security.html">«Информационная безопасность»</a>: от угроз — к защите, затем к резервным копиям и восстановлению.</p>
+  </div>
+</article>
+</main>
+
+<footer class="site-footer">
+  <p>Толеутай Амирхан · группа 2-135 W-D</p>
+  <p>© 2026 · Учебный проект: сайт создан в образовательных целях</p>
+  <p><a href="admin.html">Вход для владельца</a> · <a href="https://github.com/playboicarti1629-doc/amirkhan-site" target="_blank" rel="noopener">Код сайта на GitHub</a></p>
+</footer>
+
+<div class="toast-area" id="toastArea" aria-live="polite"></div>
+<script src="js/main.js" defer></script>
+</body>
+</html>

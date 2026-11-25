@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Операционные системы и программное обеспечение — Толеутай Амирхан</title>
+  <meta name="description" content="Установка и настройка операционных систем, файловые системы, прикладные программы, лицензирование и обновления.">
+  <link rel="stylesheet" href="css/styles.css">
+  <script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}</script>
+</head>
+<body>
+
+<header class="site-header">
+  <button type="button" class="theme-toggle" id="themeToggle" aria-pressed="false">☾ Тёмная тема</button>
+  <h1>Операционные системы и программное обеспечение</h1>
+  <p>Толеутай Амирхан · Web Design · группа 2-135 W-D</p>
+</header>
+
+<button type="button" class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="siteNav">☰ Меню</button>
+<nav class="site-nav" id="siteNav" aria-label="Основное меню">
+    <a href="index.html">Главная</a>
+    <a href="safety.html">Техника безопасности</a>
+    <a href="hardware.html">Оборудование</a>
+    <a href="software.html" class="active" aria-current="page">ОС и ПО</a>
+    <a href="security.html">Информационная безопасность</a>
+    <a href="blender.html">Blender</a>
+    <a href="figma.html">Figma</a>
+    <a href="ux-ui.html">UX/UI</a>
+    <a href="html-css.html">HTML, CSS и JS</a>
+    <a href="reviews.html">Отзывы</a>
+</nav>
+
+<main class="page-content" id="content">
+<h2 class="section-title">Операционные системы и программное обеспечение</h2>
+<p class="intro">Установка и настройка операционных систем, файловые системы, прикладные программы, лицензирование и обновления. В разделе работ: <strong>27</strong>.</p>
+
+<div class="tools">
+  <label class="sr-only" for="workSearch">Поиск по работам</label>
+  <input type="search" id="workSearch" placeholder="Поиск по названию и содержанию работ…" autocomplete="off">
+  <span class="result-count" id="resultCount" aria-live="polite"></span>
+  <button type="button" class="btn secondary" id="collapseAll">Свернуть все</button>
+  <button type="button" class="btn secondary" id="expandAll">Развернуть все</button>
+</div>
+<p class="empty-message" id="emptyMessage" hidden>Ничего не найдено. Попробуйте изменить запрос.</p>
+
+<article class="entry-card" data-work>
+  <h3><span>Сравнение операционных систем</span><button type="button" class="toggle-btn" aria-expanded="true" aria-label="Свернуть или развернуть: Сравнение операционных систем">−</button></h3>
+  <div class="card-body">
+    <p class="explain">Windows, macOS и Linux сравниваются по разработчику, устройствам, стоимости и безопасности.</p>
+    <table class="data-table">
+      <tr><th>Критерий</th><th>Windows</th><th>macOS</th><th>Linux</th></tr>
+      <tr><td>Год выпуска</td><td>1985</td><td>2001</td><td>1991</td></tr>
+      <tr><td>Разработчик</td><td>Microsoft</td><td>Apple</td><td>Сообщество</td></tr>
+      <tr><td>Устройства</td><td>ПК, ноутбуки</td><td>MacBook, iMac</td><td>ПК, серверы</td></tr>
+      <tr><td>Стоимость</td><td>Платная</td><td>Бесплатная*</td><td>Бесплатная</td></tr>
+      <tr><td>Безопасность</td><td>Высокая</td><td>Высокая</td><td>Высокая</td></tr>
+    </table>
+    <p class="note">* macOS бесплатна для владельцев устройств Apple.</p>
+  </div>
+</article>
+
+<article class="entry-card" data-work>
+  <h3><span>Системные требования операционных систем</span><button type="button" class="toggle-btn" aria-expanded="true" aria-label="Свернуть или развернуть: Системные требования операционных систем">−</button></h3>
+  <div class="card-body">
+    <p class="explain">Минимальные требования, которые нужно проверить до установки каждой системы.</p>
+    <table class="data-table">
+      <tr><th>Критерии</th><th>Windows 11</th><th>macOS</th><th>Ubuntu Linux</th></tr>
+      <tr><td>Процессор</td><td>1 ГГц, 2 ядра</td><td>Apple / Intel</td><td>2 ГГц, 2 ядра</td></tr>
+      <tr><td>ОЗУ</td><td>4 ГБ</td><td>Зависит от Mac</td><td>4 ГБ</td></tr>
+      <tr><td>Место на диске</td><td>64 ГБ</td><td>Зависит от Mac</td><td>25 ГБ</td></tr>
+      <tr><td>Видеокарта</td><td>DirectX 12</td><td>Совместимая с Mac</td><td>Поддержка 3D</td></tr>
+      <tr><td>Тип устройства</td><td>ПК, ноутбук</td><td>MacBook, iMac</td><td>ПК, ноутбук</td></tr>
+    </table>
+  </div>
+</article>
+
+<article class="entry-card" data-work>
+  <h3><span>Подготовка к установке операционной системы</span><button type="button" class="toggle-btn" aria-expanded="true" aria-label="Свернуть или развернуть: Подготовка к установке операционной системы">−</button></h3>
+  <div class="card-body">
+    <p class="explain">Семь шагов подготовки компьютера к установке.</p>
+    <ol>
+      <li>Проверка совместимости с системными требованиями.</li>
+      <li>Резервное копирование важных файлов.</li>
+      <li>Проверка оборудования (диск, ОЗУ).</li>
+      <li>Скачать ISO с официального сайта.</li>
+      <li>Создать загрузочную флешку.</li>
+      <li>Настроить BIOS/UEFI - выбрать USB.</li>
+      <li>Запустить установку.</li>
+    </ol>
+  </div>
+</article>
+
+<article class="entry-card" data-work>
+  <h3><span>Способы установки операционной системы</span><button type="button" class="toggle-btn" aria-expanded="true" aria-label="Свернуть или развернуть: Способы установки операционной системы">−</button></h3>
+  <div class="card-body">
+    <p class="explain">Шесть способов установки с плюсами и минусами каждого.</p>
+    <table class="data-table">
+      <tr><th>Способ</th><th>Описание</th><th>Плюсы</th><th>Минусы</th></tr>
+      <tr><td>USB-флешка</td><td>С загрузочной флешки</td><td>Быстро, удобно</td><td>Нужно подготовить флешку</td></tr>
+      <tr><td>DVD-диск</td><td>С установочного диска</td><td>Простой способ</td><td>Нужен DVD-привод</td></tr>
+      <tr><td>Через интернет</td><td>Загрузка из сети</td><td>Не нужен диск</td><td>Нужен стабильный интернет</td></tr>
+      <tr><td>По сети (PXE)</td><td>С сетевого сервера</td><td>Для многих ПК</td><td>Нужна настройка сервера</td></tr>
+      <tr><td>Восстановление</td><td>Из резервной копии</td><td>Сохраняет настройки</td><td>Нужна заранее созданная копия</td></tr>
+      <tr><td>Виртуальная машина</td><td>Внутри программы</td><td>Несколько ОС на одном ПК</td><td>Требует ресурсов</td></tr>
+    </table>
+  </div>
+</article>
+
+<article class="entry-card" data-work>
+  <h3><span>Создание загрузочной флешки</span><button type="button" class="toggle-btn" aria-expanded="true" aria-label="Свернуть или развернуть: Создание загрузочной флешки">−</button></h3>
+  <div class="card-body">
+    <p class="explain">Как записать установочный образ Windows на флешку.</p>
+    <p><strong>Нужно:</strong> ПК с интернетом, USB от 8 ГБ, Media Creation Tool.</p>
+    <ol>
+      <li>Вставить флешку и сохранить с неё важные файлы.</li>
+      <li>Скачать Media Creation Tool с сайта Microsoft.</li>
+      <li>Запустить, принять условия, выбрать язык и версию Windows.</li>
+      <li>Выбрать «USB-устройство флэш-памяти» и свою флешку.</li>
+      <li>Дождаться записи и безопасно извлечь флешку.</li>
+    </ol>
+    <p class="warn">Во время записи нельзя вытаскивать флешку.</p>
+  </div>
+</article>
+
+<article class="entry-card" data-work>
+  <h3><span>Параметры BIOS и UEFI</span><button type="button" class="toggle-btn" aria-expanded="true" aria-label="Свернуть или развернуть: Параметры BIOS и UEFI">−</button></h3>
+  <div class="card-body">
+    <p class="explain">Настройки BIOS/UEFI, которые влияют на установку системы.</p>
+    <ul>
+      <li><strong>Boot Priority</strong> - порядок загрузки (для установки выбрать USB).</li>
+      <li><strong>Boot Mode</strong> - UEFI или Legacy BIOS.</li>
+      <li><strong>Secure Boot</strong> - защита от непроверенных программ.</li>
+      <li><strong>USB Boot</strong> - разрешает загрузку с USB.</li>
+      <li><strong>SATA Mode</strong> - AHCI или RAID.</li>
+      <li><strong>TPM 2.0</strong> - нужен для Windows 11.</li>
+      <li><strong>Fast Boot</strong> - ускоряет запуск, иногда мешает загрузке с флешки.</li>
+      <li><strong>Date and Time</strong> - дата и время.</li>
+    </ul>
+  </div>
+</article>
+
+<article class="entry-card" data-work>
+  <h3><span>Файловые системы</span><button type="button" class="toggle-btn" aria-expanded="true" aria-label="Свернуть или развернуть: Файловые системы">−</button></h3>
+  <div class="card-body">
+    <p class="explain">Файловые системы сравниваются по назначению, плюсам и ограничениям.</p>
+    <table class="data-table">
+      <tr><th>ФС</th><th>Где используется</th><th>Плюсы</th><th>Минусы</th></tr>
+      <tr><td>FAT32</td><td>Флешки, карты памяти</td><td>Работает везде</td><td>Файлы не больше 4 ГБ</td></tr>
+      <tr><td>NTFS</td><td>Windows, диски</td><td>Надёжная, большие файлы</td><td>Слабая поддержка другими ОС</td></tr>
+      <tr><td>exFAT</td><td>Флешки, внешние диски</td><td>Большие файлы, Windows + macOS</td><td>Меньше функций защиты</td></tr>
+      <tr><td>ext4</td><td>Linux</td><td>Надёжная, быстрая</td><td>Windows без доп. программ не читает</td></tr>
+      <tr><td>APFS</td><td>macOS</td><td>Хороша для SSD, шифрование</td><td>В основном только Apple</td></tr>
+    </table>
+  </div>
+</article>
+
+<article class="entry-card" data-work>
+  <h3><span>Установка Windows</span><button type="button" class="toggle-btn" aria-expanded="true" aria-label="Свернуть или развернуть: Установка Windows">−</button></h3>
+  <div class="card-body">
+    <p class="explain">Порядок установки Windows с загрузочной флешки.</p>
+    <ol>
+      <li>Подготовить загрузочную флешку и сохранить важные файлы.</li>
+      <li>Вставить флешку → Boot Menu (F2 / F12 / Del / Esc) → выбрать USB.</li>
+      <li>Выбрать язык → «Установить» → ключ (если есть) → версию ОС.</li>
+      <li>Принять лицензию → «Выборочная» → выбрать диск.</li>
+      <li>Дождаться окончания, настроить систему, установить драйверы.</li>
+    </ol>
+    <p class="warn">Не выключайте ПК во время установки. Используйте только официальный образ.</p>
+  </div>
+</article>
+
+<article class="entry-card" data-work>
+  <h3><span>Сравнение Ubuntu и Linux Mint</span><button type="button" class="toggle-btn" aria-expanded="true" aria-label="Свернуть или развернуть: Сравнение Ubuntu и Linux Mint">−</button></h3>
+  <div class="card-body">
+    <p class="explain">Два популярных дистрибутива Linux сравниваются по основе, интерфейсу и требованиям.</p>
+    <table class="data-table">
+      <tr><th>Характеристика</th><th>Ubuntu</th><th>Linux Mint</th></tr>
+      <tr><td>Разработчик</td><td>Canonical</td><td>Linux Mint Team</td></tr>
+      <tr><td>Основа</td><td>Debian</td><td>Ubuntu / Debian</td></tr>
+      <tr><td>Интерфейс</td><td>GNOME</td><td>Cinnamon</td></tr>
+      <tr><td>Удобство</td><td>Современный</td><td>Похож на Windows</td></tr>
+      <tr><td>Производительность</td><td>Больше ресурсов</td><td>Есть лёгкая версия Xfce</td></tr>
+      <tr><td>ОЗУ</td><td>От 6 ГБ</td><td>От 2 ГБ (рек. 4 ГБ)</td></tr>
+      <tr><td>Стоимость</td><td>Бесплатная</td><td>Бесплатная</td></tr>
+    </table>
+  </div>
+</article>
+
+<article class="entry-card" data-work>
+  <h3><span>Первоначальная настройка операционной системы</span><button type="button" class="toggle-btn" aria-expanded="true" aria-label="Свернуть или развернуть: Первоначальная настройка операционной системы">−</button></h3>
+  <div class="card-body">
+    <p class="explain">Что настраивают сразу после установки системы.</p>
+    <ol>
+      <li>Язык и регион.</li>
+      <li>Дата и время.</li>
+      <li>Подключение к интернету.</li>
+      <li>Создание учётной записи.</li>
+      <li>Настройки конфиденциальности.</li>
+      <li>Установка драйверов.</li>
+      <li>Обновление системы.</li>
+      <li>Установка нужных программ.</li>
+      <li>Настройка рабочего стола.</li>
+      <li>Проверка работы устройств.</li>
+    </ol>
+  </div>
+</article>
+
+<article class="entry-card" data-work>
+  <h3><span>Создание учётной записи пользователя</span><button type="button" class="toggle-btn" aria-expanded="true" aria-label="Свернуть или развернуть: Создание учётной записи пользователя">−</button></h3>
+  <div class="card-body">
+    <p class="explain">Как добавить нового пользователя в Windows.</p>
+    <ol>
+      <li>Пуск → Параметры → Учётные записи → Другие пользователи.</li>
+      <li>«Добавить учётную запись».</li>
+      <li>Выбрать Microsoft или локальную учётную запись.</li>
+      <li>Ввести имя, пароль и контрольные вопросы.</li>
+      <li>При необходимости сделать администратором.</li>
+      <li>Выйти и войти в новую учётную запись.</li>
+    </ol>
+  </div>
+</article>
+
+<article class="entry-card" data-work>
+  <h3><span>Основные драйверы</span><button type="button" class="toggle-btn" aria-expanded="true" aria-label="Свернуть или развернуть: Основные драйверы">−</button></h3>
+  <div class="card-body">
+    <p class="explain">Какие драйверы нужны компьютеру и за что отвечает каждый.</p>
+    <ul>
+      <li>Видеокарта - изображение и графика</li>
+      <li>Звуковая карта - колонки, наушники, микрофон</li>
+      <li>Сетевая карта (LAN) - интернет по кабелю</li>
+      <li>Wi-Fi - беспроводная сеть</li>
+      <li>Чипсет - работа материнской платы</li>
+      <li>Bluetooth - беспроводные устройства</li>
+      <li>USB - порты и устройства</li>
+      <li>Принтер и сканер</li>
+    </ul>
+  </div>
+</article>
+
+<article class="entry-card" data-work>
+  <h3><span>Работа с Debian в DistroSea</span><button type="button" class="toggle-btn" aria-expanded="true" aria-label="Свернуть или развернуть: Работа с Debian в DistroSea">−</button></h3>
+  <div class="card-body">
+    <p class="explain">Запуск Debian в браузере и проверка версии системы командами терминала; каждый шаг показан на скриншоте.</p>
+    <ol>
+    <li>
+      Открыть браузер → найти distrosea.com и выбрать Debian.
+      <div class="schema">
+        <img src="images/distrosea-1.png" alt="Выбор Debian на сайте DistroSea" loading="lazy">
+      </div>
+    </li>
+    <li>
+      Выбрать доступную версию Debian.
+      <div class="schema">
+        <img src="images/distrosea-2.png" alt="Выбор версии Debian" loading="lazy">
+      </div>
+    </li>
+    <li>
+      Нажать Start и дождаться рабочего стола XFCE.
+      <div class="schema">
+        <img src="images/distrosea-3.png" alt="Рабочий стол Debian XFCE" loading="lazy">
+      </div>
+    </li>
+    <li>
+      Открыть Applications → Terminal Emulator.
+      <div class="schema">
+        <img src="images/distrosea-4.png" alt="Меню Applications" loading="lazy">
+      </div>
+    </li>
+    <li>
+      Выполнить команды:<br>
+      <code>uname -a</code><br>
+      <code>cat /etc/os-release</code>
+      <div class="schema">
+        <img src="images/distrosea-5.png" alt="Результат команд в терминале" loading="lazy">
+      </div>
+    </li>
+    <li>Ознакомиться с информацией и завершить сеанс.</li>
+  </ol>
+  </div>
+</article>
+
+<article class="entry-card" data-work>
+  <h3><span>Драйверы и версия операционной системы</span><button type="button" class="toggle-btn" aria-expanded="true" aria-label="Свернуть или развернуть: Драйверы и версия операционной системы">−</button></h3>
+  <div class="card-body">
+    <p class="explain">Результат проверки драйверов и версии Windows на учебном компьютере.</p>
+    <table class="data-table">
+      <tr><th>Компонент</th><th>Версия</th><th>Назначение</th><th>Проблемы</th></tr>
+      <tr><td>Драйвер NVIDIA</td><td>26.21.14.4292</td><td>Работа видеокарты</td><td>Обновить / переустановить</td></tr>
+      <tr><td>Realtek Ethernet</td><td>10.36.701.2019</td><td>Сеть</td><td>Переустановить драйвер</td></tr>
+      <tr><td>NVIDIA HD Audio</td><td>1.3.38.21</td><td>Звук по HDMI</td><td>Проверить настройки</td></tr>
+      <tr><td>Intel ME Interface</td><td>1914.12.0.1256</td><td>Функции Intel</td><td>Драйвер с сайта</td></tr>
+      <tr><td>SATA AHCI</td><td>10.0.19041.3636</td><td>Диски SATA</td><td>Проверить кабели</td></tr>
+      <tr><td>NVMe</td><td>10.0.19041.4355</td><td>NVMe SSD</td><td>Проверить накопитель</td></tr>
+      <tr><td>Windows 10 Pro</td><td>22H2 (19045)</td><td>Управление системой</td><td>Обновления, sfc /scannow</td></tr>
+    </table>
+  </div>
+</article>
+
+<article class="entry-card" data-work>
+  <h3><span>Установленные программы на учебном компьютере</span><button type="button" class="toggle-btn" aria-expanded="true" aria-label="Свернуть или развернуть: Установленные программы на учебном компьютере">−</button></h3>
+  <div class="card-body">
+    <p class="explain">Список найденных программ с версиями и назначением.</p>
+    <table class="data-table">
+      <tr><th>Программа</th><th>Версия</th><th>Назначение</th></tr>
+      <tr><td>Microsoft Office LTSC 2021</td><td>16.0.14334</td><td>Документы, таблицы</td></tr>
+      <tr><td>AIDA64 Extreme</td><td>8.00</td><td>Диагностика ПК</td></tr>
+      <tr><td>WinRAR</td><td>7.23</td><td>Архивы</td></tr>
+      <tr><td>Python</td><td>3.12.3</td><td>Программирование</td></tr>
+      <tr><td>MySQL Server</td><td>8.0.35</td><td>Базы данных</td></tr>
+      <tr><td>MySQL Workbench</td><td>8.0.34</td><td>Управление БД</td></tr>
+      <tr><td>Sublime Text</td><td>3</td><td>Редактор кода</td></tr>
+      <tr><td>Inkscape</td><td>1.4.3</td><td>Векторная графика</td></tr>
+      <tr><td>OneDrive</td><td>26.158</td><td>Облако</td></tr>
+      <tr><td>Java</td><td>8 Update 503</td><td>Запуск Java-программ</td></tr>
+      <tr><td>SolidCAM</td><td>2022</td><td>CAD / обработка</td></tr>
+      <tr><td>Team Fortress 2, Unturned, ETS2 Demo</td><td>-</td><td>Игры</td></tr>
+    </table>
+  </div>
+</article>
+
+<article class="entry-card" data-work>
+  <h3><span>Установка прикладных программ</span><button type="button" class="toggle-btn" aria-expanded="true" aria-label="Свернуть или развернуть: Установка прикладных программ">−</button></h3>
+  <div class="card-body">
+    <p class="explain">Общий порядок установки прикладных программ.</p>
+    <ol>
+      <li>Проверить требования и совместимость.</li>
+      <li>Проверить свободное место.</li>
+      <li>Скачать с официального сайта.</li>
+      <li>Запустить от имени администратора.</li>
+      <li>Выбрать компоненты и дождаться установки.</li>
+      <li>Перезагрузить при необходимости.</li>
+      <li>Активировать, настроить, обновить.</li>
+      <li>Проверить работу на тестовом файле.</li>
+    </ol>
+  </div>
+</article>
+
+<article class="entry-card" data-work>
+  <h3><span>Подготовка к установке Microsoft Office</span><button type="button" class="toggle-btn" aria-expanded="true" aria-label="Свернуть или развернуть: Подготовка к установке Microsoft Office">−</button></h3>
+  <div class="card-body">
+    <p class="explain">Что проверить и подготовить перед установкой Office.</p>
+    <ol>
+      <li>Проверить системные требования (обычно 64-бит, 2–4 ГБ ОЗУ).</li>
+      <li>Определить разрядность системы.</li>
+      <li>Убедиться в правах администратора.</li>
+      <li>Освободить место и закрыть приложения.</li>
+      <li>Сделать резервную копию документов.</li>
+    </ol>
+  </div>
+</article>
+
+<article class="entry-card" data-work>
+  <h3><span>Программы для работы с PDF</span><button type="button" class="toggle-btn" aria-expanded="true" aria-label="Свернуть или развернуть: Программы для работы с PDF">−</button></h3>
+  <div class="card-body">
+    <p class="explain">Пять программ для работы с PDF и их особенности.</p>
+    <table class="data-table">
+      <tr><th>Программа</th><th>Функции</th><th>Особенности</th></tr>
+      <tr><td>Adobe Acrobat Reader</td><td>Просмотр, печать, формы, подпись</td><td>Популярная</td></tr>
+      <tr><td>Foxit PDF Reader</td><td>Просмотр, комментарии, подпись</td><td>Удобный интерфейс</td></tr>
+      <tr><td>PDF-XChange Editor</td><td>Редактирование, объединение</td><td>Много инструментов</td></tr>
+      <tr><td>SumatraPDF</td><td>Просмотр и поиск</td><td>Быстрая и лёгкая</td></tr>
+      <tr><td>Microsoft Edge</td><td>Просмотр, печать</td><td>Уже установлен</td></tr>
+    </table>
+  </div>
+</article>
+
+<article class="entry-card" data-work>
+  <h3><span>Программы для видеоконференций</span><button type="button" class="toggle-btn" aria-expanded="true" aria-label="Свернуть или развернуть: Программы для видеоконференций">−</button></h3>
+  <div class="card-body">
+    <p class="explain">Пять сервисов для видеосвязи с основными функциями.</p>
+    <table class="data-table">
+      <tr><th>Программа</th><th>Функции</th><th>Особенности</th></tr>
+      <tr><td>Zoom</td><td>Звонки, чат, запись, экран</td><td>Удобна для учёбы</td></tr>
+      <tr><td>Microsoft Teams</td><td>Видео, переписка, файлы</td><td>Работа и учёба</td></tr>
+      <tr><td>Google Meet</td><td>Звонки, экран, субтитры</td><td>В браузере</td></tr>
+      <tr><td>Skype</td><td>Звонки, сообщения, файлы</td><td>Личное общение</td></tr>
+      <tr><td>Cisco Webex</td><td>Конференции, запись</td><td>Деловые встречи</td></tr>
+    </table>
+  </div>
+</article>
+
+<article class="entry-card" data-work>
+  <h3><span>Программы для аудио и видео</span><button type="button" class="toggle-btn" aria-expanded="true" aria-label="Свернуть или развернуть: Программы для аудио и видео">−</button></h3>
+  <div class="card-body">
+    <p class="explain">Программы для работы со звуком и видео, сгруппированные по назначению.</p>
+    <p><strong>Аудио:</strong> Audacity, Adobe Audition, FL Studio, AIMP, REAPER.</p>
+    <p><strong>Видео:</strong> Adobe Premiere Pro, DaVinci Resolve, CapCut, Shotcut, OBS Studio, VLC.</p>
+  </div>
+</article>
+
+<article class="entry-card" data-work>
+  <h3><span>Восстановление работы приложения</span><button type="button" class="toggle-btn" aria-expanded="true" aria-label="Свернуть или развернуть: Восстановление работы приложения">−</button></h3>
+  <div class="card-body">
+    <p class="explain">Что делать, если приложение работает неправильно: от простых действий к радикальным.</p>
+    <ol>
+      <li>Закрыть и снова запустить приложение.</li>
+      <li>Перезагрузить компьютер.</li>
+      <li>Проверить обновления приложения и Windows.</li>
+      <li>Проверить приложение антивирусом.</li>
+      <li>Параметры → Приложения → «Исправить».</li>
+      <li>Сбросить настройки или переустановить.</li>
+    </ol>
+  </div>
+</article>
+
+<article class="entry-card" data-work>
+  <h3><span>Ошибки при установке программ</span><button type="button" class="toggle-btn" aria-expanded="true" aria-label="Свернуть или развернуть: Ошибки при установке программ">−</button></h3>
+  <div class="card-body">
+    <p class="explain">Десять типичных ошибок установки с причинами и способами устранения.</p>
+    <table class="data-table">
+      <tr><th>№</th><th>Ошибка</th><th>Причина</th><th>Устранение</th></tr>
+      <tr><td>1</td><td>Недостаточно места</td><td>Мало места на диске</td><td>Освободить диск</td></tr>
+      <tr><td>2</td><td>Повреждён файл</td><td>Ошибка скачивания</td><td>Скачать заново</td></tr>
+      <tr><td>3</td><td>Несовместимость</td><td>Не подходит версия Windows</td><td>Совместимая версия</td></tr>
+      <tr><td>4</td><td>Ошибка драйверов</td><td>Устаревшие драйверы</td><td>Обновить драйверы</td></tr>
+      <tr><td>5</td><td>Нет прав</td><td>Нет прав администратора</td><td>Запуск от администратора</td></tr>
+      <tr><td>6</td><td>Нет интернета</td><td>Нестабильное соединение</td><td>Проверить сеть</td></tr>
+      <tr><td>7</td><td>Установка зависает</td><td>Сбой или конфликт</td><td>Перезагрузить ПК</td></tr>
+      <tr><td>8</td><td>Антивирус блокирует</td><td>Файл как угроза</td><td>Проверить файл</td></tr>
+      <tr><td>9</td><td>Мало ресурсов</td><td>Слабый ПК</td><td>Проверить требования</td></tr>
+      <tr><td>10</td><td>Неправильный раздел</td><td>Ошибка выбора диска</td><td>Проверить разделы</td></tr>
+    </table>
+  </div>
+</article>
+
+<article class="entry-card" data-work>
+  <h3><span>Лицензионное и нелицензионное ПО</span><button type="button" class="toggle-btn" aria-expanded="true" aria-label="Свернуть или развернуть: Лицензионное и нелицензионное ПО">−</button></h3>
+  <div class="card-body">
+    <p class="explain">Сравнение по семи критериям: законность, безопасность, поддержка и другие.</p>
+    <table class="data-table">
+      <tr><th>Критерий</th><th>Лицензионное</th><th>Нелицензионное</th></tr>
+      <tr><td>Законность</td><td>На законных основаниях</td><td>Нарушает лицензию</td></tr>
+      <tr><td>Стоимость</td><td>Платное или бесплатное</td><td>Часто бесплатно</td></tr>
+      <tr><td>Обновления</td><td>Официальные</td><td>Могут отсутствовать</td></tr>
+      <tr><td>Безопасность</td><td>Проверяется разработчиком</td><td>Может содержать вирусы</td></tr>
+      <tr><td>Поддержка</td><td>Есть</td><td>Обычно нет</td></tr>
+      <tr><td>Надёжность</td><td>Предсказуемая</td><td>Возможны сбои</td></tr>
+      <tr><td>Активация</td><td>Официальный ключ / аккаунт</td><td>Незаконный активатор</td></tr>
+    </table>
+  </div>
+</article>
+
+<article class="entry-card" data-work>
+  <h3><span>Установка лицензионного ПО</span><button type="button" class="toggle-btn" aria-expanded="true" aria-label="Свернуть или развернуть: Установка лицензионного ПО">−</button></h3>
+  <div class="card-body">
+    <p class="explain">Как установить программу законно и проверить активацию.</p>
+    <ol>
+      <li>Найти официальный сайт разработчика.</li>
+      <li>Выбрать и скачать программу.</li>
+      <li>Проверить файл антивирусом.</li>
+      <li>Установить, принять лицензию.</li>
+      <li>Ввести ключ или войти в аккаунт.</li>
+      <li>Проверить активацию.</li>
+    </ol>
+  </div>
+</article>
+
+<article class="entry-card" data-work>
+  <h3><span>Что делать, если нет лицензии</span><button type="button" class="toggle-btn" aria-expanded="true" aria-label="Свернуть или развернуть: Что делать, если нет лицензии">−</button></h3>
+  <div class="card-body">
+    <p class="explain">Безопасная альтернатива: официальные бесплатные и пробные версии.</p>
+    <ol>
+      <li>Определить нужную программу.</li>
+      <li>Найти бесплатную или пробную версию на официальном сайте.</li>
+      <li>Скачать, проверить антивирусом и установить.</li>
+      <li>Настроить и проверить работу.</li>
+    </ol>
+    <p class="warn">Использование взломанных активаторов может привести к заражению компьютера и потере данных.</p>
+  </div>
+</article>
+
+<article class="entry-card" data-work>
+  <h3><span>Зачем обновлять программное обеспечение</span><button type="button" class="toggle-btn" aria-expanded="true" aria-label="Свернуть или развернуть: Зачем обновлять программное обеспечение">−</button></h3>
+  <div class="card-body">
+    <p class="explain">Причины регулярно обновлять программы и систему.</p>
+    <ul>
+      <li>Устранение ошибок</li>
+      <li>Закрытие уязвимостей</li>
+      <li>Защита от новых вирусов</li>
+      <li>Улучшение производительности</li>
+      <li>Новые функции</li>
+      <li>Совместимость с современными устройствами</li>
+      <li>Повышение стабильности</li>
+    </ul>
+  </div>
+</article>
+
+<article class="entry-card" data-work>
+  <h3><span>Очистка папки от ненужных файлов</span><button type="button" class="toggle-btn" aria-expanded="true" aria-label="Свернуть или развернуть: Очистка папки от ненужных файлов">−</button></h3>
+  <div class="card-body">
+    <p class="explain">Разбор папки с файлами: что можно безопасно удалить и почему.</p>
+    <ul>
+      <li>LegacyLauncher, Setup.3.5.0.exe - лаунчер игры, не используется для работы</li>
+      <li>WhatsApp installer.exe - установщик, после установки можно удалить</li>
+      <li>Gemini_Generated_Image_*.jpg/png - временные ИИ-изображения</li>
+      <li>RobloxPlayerInstaller.exe - установщик игры</li>
+      <li>index.html, game number.html, wonders-of-the-world.html - старые работы</li>
+      <li>LegacyLauncher.torrent - загрузочный файл игры</li>
+      <li>NCALayerInstall_x64.exe - установщик ПО</li>
+      <li>7_chudes_prostoy_kod.zip, 7_chudes_sveta_site.zip - старые работы</li>
+      <li>AstralRinth-beta.zip, config.zip - игровые архивы</li>
+      <li>загрузка.jpg, WhatsApp Image … .jpg - временные медиа</li>
+    </ul>
+  </div>
+</article>
+</main>
+
+<footer class="site-footer">
+  <p>Толеутай Амирхан · группа 2-135 W-D</p>
+  <p>© 2026 · Учебный проект: сайт создан в образовательных целях</p>
+  <p><a href="admin.html">Вход для владельца</a> · <a href="https://github.com/playboicarti1629-doc/amirkhan-site" target="_blank" rel="noopener">Код сайта на GitHub</a></p>
+</footer>
+
+<dialog id="lightbox" class="lightbox" aria-label="Увеличенное изображение">
+  <img src="" alt="">
+  <p></p>
+  <button type="button" class="btn" data-close>Закрыть</button>
+</dialog>
+<script src="js/main.js" defer></script>
+</body>
+</html>

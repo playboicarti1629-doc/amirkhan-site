@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Техника безопасности и охрана труда — Толеутай Амирхан</title>
+  <meta name="description" content="Правила безопасной работы с компьютером и периферией, организация рабочего места и действия в аварийной ситуации.">
+  <link rel="stylesheet" href="css/styles.css">
+  <script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}</script>
+</head>
+<body>
+
+<header class="site-header">
+  <button type="button" class="theme-toggle" id="themeToggle" aria-pressed="false">☾ Тёмная тема</button>
+  <h1>Техника безопасности и охрана труда</h1>
+  <p>Толеутай Амирхан · Web Design · группа 2-135 W-D</p>
+</header>
+
+<button type="button" class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="siteNav">☰ Меню</button>
+<nav class="site-nav" id="siteNav" aria-label="Основное меню">
+    <a href="index.html">Главная</a>
+    <a href="safety.html" class="active" aria-current="page">Техника безопасности</a>
+    <a href="hardware.html">Оборудование</a>
+    <a href="software.html">ОС и ПО</a>
+    <a href="security.html">Информационная безопасность</a>
+    <a href="blender.html">Blender</a>
+    <a href="figma.html">Figma</a>
+    <a href="ux-ui.html">UX/UI</a>
+    <a href="html-css.html">HTML, CSS и JS</a>
+    <a href="reviews.html">Отзывы</a>
+</nav>
+
+<main class="page-content" id="content">
+<h2 class="section-title">Техника безопасности и охрана труда</h2>
+<p class="intro">Правила безопасной работы с компьютером и периферией, организация рабочего места и действия в аварийной ситуации. В разделе работ: <strong>10</strong>.</p>
+
+<div class="tools">
+  <label class="sr-only" for="workSearch">Поиск по работам</label>
+  <input type="search" id="workSearch" placeholder="Поиск по названию и содержанию работ…" autocomplete="off">
+  <span class="result-count" id="resultCount" aria-live="polite"></span>
+  <button type="button" class="btn secondary" id="collapseAll">Свернуть все</button>
+  <button type="button" class="btn secondary" id="expandAll">Развернуть все</button>
+</div>
+<p class="empty-message" id="emptyMessage" hidden>Ничего не найдено. Попробуйте изменить запрос.</p>
+
+<article class="entry-card" data-work>
+  <h3><span>Проверка рабочего места</span><button type="button" class="toggle-btn" aria-expanded="true" aria-label="Свернуть или развернуть: Проверка рабочего места">−</button></h3>
+  <div class="card-body">
+    <p class="explain">Итог осмотра рабочего места перед началом работы: техника исправна, порядок и освещение в норме.</p>
+    <p>Рабочее место проверено. Компьютер исправен, на столе порядок, освещение хорошее. Нарушений не обнаружено. Рабочее место соответствует требованиям безопасности.</p>
+  </div>
+</article>
+
+<article class="entry-card" data-work>
+  <h3><span>Организация рабочего места при работе за монитором</span><button type="button" class="toggle-btn" aria-expanded="true" aria-label="Свернуть или развернуть: Организация рабочего места при работе за монитором">−</button></h3>
+  <div class="card-body">
+    <p class="explain">Параметры рабочего места, которые снижают нагрузку на глаза, спину и руки при длительной работе.</p>
+    <ul>
+      <li><strong>Монитор:</strong> 50–70 см от глаз, верхний край на уровне глаз или чуть ниже.</li>
+      <li><strong>Стул:</strong> прямая спина, опора на спинку, ступни на полу.</li>
+      <li><strong>Стол:</strong> удобное положение рук и плеч.</li>
+      <li><strong>Освещение:</strong> без бликов на экране.</li>
+      <li><strong>Клавиатура и мышь:</strong> рядом, руки в естественном положении.</li>
+      <li><strong>Перерывы:</strong> смотреть вдаль, разминаться, менять позу.</li>
+      <li><strong>Порядок:</strong> чистота и проветривание помещения.</li>
+    </ul>
+  </div>
+</article>
+
+<article class="entry-card" data-work>
+  <h3><span>Электробезопасность при работе с периферией</span><button type="button" class="toggle-btn" aria-expanded="true" aria-label="Свернуть или развернуть: Электробезопасность при работе с периферией">−</button></h3>
+  <div class="card-body">
+    <p class="explain">Для каждого устройства записано главное правило электробезопасности.</p>
+    <table class="data-table">
+      <tr><th>Устройство</th><th>Требования</th></tr>
+      <tr><td>Клавиатура</td><td>Не допускать попадания жидкости, содержать в чистоте</td></tr>
+      <tr><td>Мышь</td><td>Не использовать при повреждении кабеля</td></tr>
+      <tr><td>Монитор</td><td>Не использовать при повреждении кабеля или корпуса</td></tr>
+      <tr><td>Сканер</td><td>Отключать от сети перед чисткой</td></tr>
+      <tr><td>Принтер</td><td>Не трогать внутренние части при включённом питании</td></tr>
+    </table>
+  </div>
+</article>
+
+<article class="entry-card" data-work>
+  <h3><span>Типичные нарушения при работе с клавиатурой и мышью</span><button type="button" class="toggle-btn" aria-expanded="true" aria-label="Свернуть или развернуть: Типичные нарушения при работе с клавиатурой и мышью">−</button></h3>
+  <div class="card-body">
+    <p class="explain">Шесть частых ошибок эксплуатации и способ избежать каждой из них.</p>
+    <ol>
+      <li><strong>Попадание жидкости и пыли</strong> - регулярно очищать, не есть и не пить рядом с ПК.</li>
+      <li><strong>Сильное нажатие на клавиши</strong> - нажимать аккуратно.</li>
+      <li><strong>Резкие движения мышью</strong> - пользоваться плавно.</li>
+      <li><strong>Повреждение кабелей</strong> - не тянуть провода, избегать перегибов.</li>
+      <li><strong>Неправильное положение рук</strong> - соблюдать посадку, держать кисти естественно.</li>
+      <li><strong>Длительная работа без отдыха</strong> - делать регулярные перерывы.</li>
+    </ol>
+  </div>
+</article>
+
+<article class="entry-card" data-work>
+  <h3><span>Безопасное использование наушников и гарнитур</span><button type="button" class="toggle-btn" aria-expanded="true" aria-label="Свернуть или развернуть: Безопасное использование наушников и гарнитур">−</button></h3>
+  <div class="card-body">
+    <p class="explain">Правила, которые защищают слух и продлевают срок службы наушников.</p>
+    <ul>
+      <li>Громкость не выше 60% от максимума.</li>
+      <li>Перерывы каждые 60 минут (правило 60/60).</li>
+      <li>На улице снимать один наушник / отключать шумоподавление.</li>
+      <li>Регулярно протирать амбушюры, не давать внутриканальные наушники другим.</li>
+      <li>Не дёргать за провод - тянуть за штекер.</li>
+      <li>Не использовать проводные наушники во время зарядки телефона/ноутбука от сети.</li>
+      <li>Беречь от воды и пота.</li>
+      <li>Беспроводные кейсы заряжать оригинальным кабелем.</li>
+    </ul>
+  </div>
+</article>
+
+<article class="entry-card" data-work>
+  <h3><span>Безопасное использование внешних накопителей</span><button type="button" class="toggle-btn" aria-expanded="true" aria-label="Свернуть или развернуть: Безопасное использование внешних накопителей">−</button></h3>
+  <div class="card-body">
+    <p class="explain">Рекомендации разделены на физическую, электрическую и информационную безопасность, а также организационные меры.</p>
+    <table class="data-table">
+      <tr><th>Категория</th><th>Рекомендации</th></tr>
+      <tr><td>Физическая безопасность</td><td>Беречь от ударов, влаги, пыли, магнитных полей, перепадов температуры</td></tr>
+      <tr><td>Электробезопасность</td><td>Подключать к исправным USB-портам, использовать «Безопасное извлечение»</td></tr>
+      <tr><td>Информационная безопасность</td><td>Проверять антивирусом, использовать шифрование, делать резервные копии</td></tr>
+      <tr><td>Организационные меры</td><td>Не оставлять без присмотра, не подключать чужие флешки к рабочим ПК</td></tr>
+    </table>
+  </div>
+</article>
+
+<article class="entry-card" data-work>
+  <h3><span>Безопасная замена картриджа принтера</span><button type="button" class="toggle-btn" aria-expanded="true" aria-label="Свернуть или развернуть: Безопасная замена картриджа принтера">−</button></h3>
+  <div class="card-body">
+    <p class="explain">Порядок замены, при котором принтер обесточен, а тонер не попадает на кожу и в глаза.</p>
+    <ol>
+      <li>Выключить принтер и отключить от сети.</li>
+      <li>Открыть крышку по инструкции производителя.</li>
+      <li>Аккуратно извлечь старый картридж.</li>
+      <li>Распаковать новый и снять защиту.</li>
+      <li>Установить до фиксации, закрыть крышку.</li>
+      <li>Включить принтер и сделать пробную печать.</li>
+      <li>Старый картридж утилизировать или сдать на переработку.</li>
+    </ol>
+    <p class="warn">Не касаться нагретых деталей, не вдыхать тонер, избегать попадания порошка на кожу и в глаза.</p>
+  </div>
+</article>
+
+<article class="entry-card" data-work>
+  <h3><span>Сканер и МФУ: сравнение по безопасности</span><button type="button" class="toggle-btn" aria-expanded="true" aria-label="Свернуть или развернуть: Сканер и МФУ: сравнение по безопасности">−</button></h3>
+  <div class="card-body">
+    <p class="explain">Таблица показывает, почему МФУ требует больше мер предосторожности, чем обычный сканер.</p>
+    <table class="data-table">
+      <tr><th>Критерий</th><th>Сканер</th><th>МФУ</th></tr>
+      <tr><td>Принцип работы</td><td>Оптическое сканирование</td><td>Сканирование + термопечать</td></tr>
+      <tr><td>Электробезопасность</td><td>Низкое энергопотребление</td><td>Повышенная нагрузка, нужно заземление</td></tr>
+      <tr><td>Риск ожогов</td><td>Отсутствует</td><td>Высокий (печка 160–200 °C)</td></tr>
+      <tr><td>Химические факторы</td><td>Практически нет</td><td>Тонер, озон</td></tr>
+      <tr><td>Механические опасности</td><td>Минимальные</td><td>Риск защемления при замятиях</td></tr>
+      <tr><td>Вентиляция</td><td>Обычный офис</td><td>Желательна хорошая вентиляция</td></tr>
+      <tr><td>При замятии</td><td>Отключить от сети</td><td>Отключить и дождаться остывания</td></tr>
+    </table>
+  </div>
+</article>
+
+<article class="entry-card" data-work>
+  <h3><span>Действия при аварийной ситуации</span><button type="button" class="toggle-btn" aria-expanded="true" aria-label="Свернуть или развернуть: Действия при аварийной ситуации">−</button></h3>
+  <div class="card-body">
+    <p class="explain">Порядок действий от обнаружения неисправности до вызова помощи по номерам 112 и 101.</p>
+    <ol>
+      <li><strong>Обнаружить</strong> - дым, запах гари, искрение, перегрев, жидкость, внезапный отказ.</li>
+      <li><strong>Прекратить работу</strong> - не трогать оголённые провода и повреждённые части.</li>
+      <li><strong>Отключить питание</strong>, если это безопасно. При дыме/искрении - не трогать, звать помощь.</li>
+      <li><strong>Предупредить окружающих</strong>, ограничить доступ к опасному месту.</li>
+      <li><strong>Вызвать помощь</strong> - 112 (единый номер), 101 (пожарная).</li>
+      <li><strong>Не ремонтировать самостоятельно</strong>.</li>
+      <li><strong>Возобновлять работу</strong> только после проверки специалистом.</li>
+    </ol>
+  </div>
+</article>
+
+<article class="entry-card" data-work>
+  <h3><span>Памятка по технике безопасности при работе с периферией</span><button type="button" class="toggle-btn" aria-expanded="true" aria-label="Свернуть или развернуть: Памятка по технике безопасности при работе с периферией">−</button></h3>
+  <div class="card-body">
+    <p class="explain">Девять коротких правил, которые удобно повторить перед началом работы.</p>
+    <ol>
+      <li>Перед работой проверить исправность устройств и кабелей.</li>
+      <li>Руки сухие, не допускать попадания жидкости.</li>
+      <li>Не трогать провода и разъёмы мокрыми руками.</li>
+      <li>Не разбирать и не ремонтировать самостоятельно.</li>
+      <li>Принтер и сканер - по инструкции, не касаться горячих и движущихся деталей.</li>
+      <li>Флешку и внешний диск извлекать через «Безопасное извлечение».</li>
+      <li>После работы выключить оборудование и навести порядок.</li>
+      <li>При неисправности - прекратить работу и сообщить ответственному.</li>
+      <li>При дыме или искрении - не трогать устройство, отключить питание только если безопасно.</li>
+    </ol>
+  </div>
+</article>
+</main>
+
+<footer class="site-footer">
+  <p>Толеутай Амирхан · группа 2-135 W-D</p>
+  <p>© 2026 · Учебный проект: сайт создан в образовательных целях</p>
+  <p><a href="admin.html">Вход для владельца</a> · <a href="https://github.com/playboicarti1629-doc/amirkhan-site" target="_blank" rel="noopener">Код сайта на GitHub</a></p>
+</footer>
+
+<dialog id="lightbox" class="lightbox" aria-label="Увеличенное изображение">
+  <img src="" alt="">
+  <p></p>
+  <button type="button" class="btn" data-close>Закрыть</button>
+</dialog>
+<script src="js/main.js" defer></script>
+</body>
+</html>

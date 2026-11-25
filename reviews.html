@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Отзывы — Толеутай Амирхан</title>
+  <meta name="description" content="Форма отзыва и список отзывов из базы данных.">
+  <link rel="stylesheet" href="css/styles.css">
+  <script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}</script>
+</head>
+<body>
+
+<header class="site-header">
+  <button type="button" class="theme-toggle" id="themeToggle" aria-pressed="false">☾ Тёмная тема</button>
+  <h1>Отзывы</h1>
+  <p>Толеутай Амирхан · Web Design · группа 2-135 W-D</p>
+</header>
+
+<button type="button" class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="siteNav">☰ Меню</button>
+<nav class="site-nav" id="siteNav" aria-label="Основное меню">
+    <a href="index.html">Главная</a>
+    <a href="safety.html">Техника безопасности</a>
+    <a href="hardware.html">Оборудование</a>
+    <a href="software.html">ОС и ПО</a>
+    <a href="security.html">Информационная безопасность</a>
+    <a href="blender.html">Blender</a>
+    <a href="figma.html">Figma</a>
+    <a href="ux-ui.html">UX/UI</a>
+    <a href="html-css.html">HTML, CSS и JS</a>
+    <a href="reviews.html" class="active" aria-current="page">Отзывы</a>
+</nav>
+
+<main class="page-content" id="content">
+<h2 class="section-title">Оставить отзыв</h2>
+<p class="intro">Поля со звёздочкой <span class="req">*</span> обязательны. Отзыв сохраняется в базе данных и сразу появляется в списке ниже. Электронную почту посетителей на сайте никто не видит.</p>
+
+<form class="form-card" id="reviewForm" novalidate>
+      <div class="form-row">
+        <label for="name">Имя <span class="req">*</span></label>
+        <input type="text" id="name" name="name" required minlength="2" maxlength="50" autocomplete="given-name">
+        <p class="field-error" data-error-for="name" role="alert"></p>
+      </div>
+      <div class="form-row">
+        <label for="email">Электронная почта <span class="req">*</span></label>
+        <input type="email" id="email" name="email" required maxlength="100" autocomplete="email">
+        <p class="hint">Почта видна только владельцу сайта и нигде не публикуется.</p>
+        <p class="field-error" data-error-for="email" role="alert"></p>
+      </div>
+      <div class="form-row">
+        <label for="category">О чём отзыв <span class="req">*</span></label>
+        <select id="category" name="category" required>
+          <option value="">— выберите тему —</option>
+          <option>Работы по информатике</option>
+          <option>Blender</option>
+          <option>Figma</option>
+          <option>Дизайн сайта</option>
+          <option>Другое</option>
+        </select>
+        <p class="field-error" data-error-for="category" role="alert"></p>
+      </div>
+      <div class="form-row">
+        <fieldset class="rating-group" style="border:0;padding:0;margin:0">
+          <legend class="label">Оценка <span class="req">*</span></legend>
+          <label><input type="radio" name="rating" value="1" required> 1</label>
+          <label><input type="radio" name="rating" value="2" > 2</label>
+          <label><input type="radio" name="rating" value="3" > 3</label>
+          <label><input type="radio" name="rating" value="4" > 4</label>
+          <label><input type="radio" name="rating" value="5" > 5</label>
+        </fieldset>
+        <p class="field-error" data-error-for="rating" role="alert"></p>
+      </div>
+      <div class="form-row">
+        <label for="message">Отзыв <span class="req">*</span></label>
+        <textarea id="message" name="message" required maxlength="500" rows="5"></textarea>
+        <p class="counter" data-counter-for="message"></p>
+        <p class="field-error" data-error-for="message" role="alert"></p>
+      </div>
+      <div class="form-row">
+        <label for="suggestion">Предложение по улучшению <span class="opt">(необязательно)</span></label>
+        <textarea id="suggestion" name="suggestion" maxlength="300" rows="3"></textarea>
+        <p class="counter" data-counter-for="suggestion"></p>
+        <p class="field-error" data-error-for="suggestion" role="alert"></p>
+      </div>
+  <button type="submit" class="btn">Отправить отзыв</button>
+</form>
+
+<h2 class="section-title">Отзывы посетителей</h2>
+<div class="stats" id="stats" aria-live="polite"></div>
+<div class="filter-bar">
+  <div>
+    <label for="filterCategory">Тема</label>
+    <select id="filterCategory">
+      <option value="">Все темы</option>
+          <option>Работы по информатике</option>
+          <option>Blender</option>
+          <option>Figma</option>
+          <option>Дизайн сайта</option>
+          <option>Другое</option>
+    </select>
+  </div>
+  <div>
+    <label for="sortBy">Сортировка</label>
+    <select id="sortBy">
+      <option value="new">Сначала новые</option>
+      <option value="old">Сначала старые</option>
+      <option value="high">Высокая оценка сверху</option>
+      <option value="low">Низкая оценка сверху</option>
+    </select>
+  </div>
+  <div>
+    <label for="searchReviews">Поиск по тексту</label>
+    <input type="search" id="searchReviews" placeholder="Имя или слово из отзыва" autocomplete="off">
+  </div>
+</div>
+<p><button type="button" class="btn secondary" id="reloadBtn">Обновить список</button></p>
+<p class="empty-message" id="listStatus" hidden></p>
+<div class="review-list" id="reviewList"></div>
+</main>
+
+<footer class="site-footer">
+  <p>Толеутай Амирхан · группа 2-135 W-D</p>
+  <p>© 2026 · Учебный проект: сайт создан в образовательных целях</p>
+  <p><a href="admin.html">Вход для владельца</a> · <a href="https://github.com/playboicarti1629-doc/amirkhan-site" target="_blank" rel="noopener">Код сайта на GitHub</a></p>
+</footer>
+
+<div class="toast-area" id="toastArea" aria-live="polite"></div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="js/config.js"></script>
+<script src="js/db.js"></script>
+<script src="js/main.js" defer></script>
+<script src="js/reviews.js" defer></script>
+</body>
+</html>

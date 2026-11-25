@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Компьютерное оборудование и периферия — Толеутай Амирхан</title>
+  <meta name="description" content="Устройства компьютера, сравнение процессоров и памяти, подбор компьютеров под разные задачи, диагностика и ремонт периферийных устройств.">
+  <link rel="stylesheet" href="css/styles.css">
+  <script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}</script>
+</head>
+<body>
+
+<header class="site-header">
+  <button type="button" class="theme-toggle" id="themeToggle" aria-pressed="false">☾ Тёмная тема</button>
+  <h1>Компьютерное оборудование и периферия</h1>
+  <p>Толеутай Амирхан · Web Design · группа 2-135 W-D</p>
+</header>
+
+<button type="button" class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="siteNav">☰ Меню</button>
+<nav class="site-nav" id="siteNav" aria-label="Основное меню">
+    <a href="index.html">Главная</a>
+    <a href="safety.html">Техника безопасности</a>
+    <a href="hardware.html" class="active" aria-current="page">Оборудование</a>
+    <a href="software.html">ОС и ПО</a>
+    <a href="security.html">Информационная безопасность</a>
+    <a href="blender.html">Blender</a>
+    <a href="figma.html">Figma</a>
+    <a href="ux-ui.html">UX/UI</a>
+    <a href="html-css.html">HTML, CSS и JS</a>
+    <a href="reviews.html">Отзывы</a>
+</nav>
+
+<main class="page-content" id="content">
+<h2 class="section-title">Компьютерное оборудование и периферия</h2>
+<p class="intro">Устройства компьютера, сравнение процессоров и памяти, подбор компьютеров под разные задачи, диагностика и ремонт периферийных устройств. В разделе работ: <strong>20</strong>.</p>
+
+<div class="tools">
+  <label class="sr-only" for="workSearch">Поиск по работам</label>
+  <input type="search" id="workSearch" placeholder="Поиск по названию и содержанию работ…" autocomplete="off">
+  <span class="result-count" id="resultCount" aria-live="polite"></span>
+  <button type="button" class="btn secondary" id="collapseAll">Свернуть все</button>
+  <button type="button" class="btn secondary" id="expandAll">Развернуть все</button>
+</div>
+<p class="empty-message" id="emptyMessage" hidden>Ничего не найдено. Попробуйте изменить запрос.</p>
+
+<article class="entry-card" data-work>
+  <h3><span>Внутренние устройства компьютера</span><button type="button" class="toggle-btn" aria-expanded="true" aria-label="Свернуть или развернуть: Внутренние устройства компьютера">−</button></h3>
+  <div class="card-body">
+    <p class="explain">Что делает каждый внутренний компонент и зачем он нужен.</p>
+    <table class="data-table">
+      <tr><th>Устройство</th><th>Назначение</th></tr>
+      <tr><td>Материнская плата</td><td>Соединяет все устройства и обеспечивает их взаимодействие</td></tr>
+      <tr><td>Процессор (CPU)</td><td>Выполняет вычисления и обрабатывает команды</td></tr>
+      <tr><td>Оперативная память (ОЗУ)</td><td>Временно хранит данные и программы</td></tr>
+      <tr><td>Жёсткий диск (HDD)</td><td>Долговременное хранение файлов и ОС</td></tr>
+      <tr><td>SSD</td><td>Быстрое хранение данных и загрузка системы</td></tr>
+      <tr><td>Видеокарта</td><td>Обрабатывает графику и выводит изображение</td></tr>
+      <tr><td>Блок питания</td><td>Обеспечивает электрической энергией</td></tr>
+      <tr><td>Система охлаждения</td><td>Отводит тепло от компонентов</td></tr>
+      <tr><td>Звуковая карта</td><td>Обрабатывает звуковые сигналы</td></tr>
+      <tr><td>Сетевая карта</td><td>Подключение к сети и интернету</td></tr>
+    </table>
+  </div>
+</article>
+
+<article class="entry-card" data-work>
+  <h3><span>Внешние устройства компьютера</span><button type="button" class="toggle-btn" aria-expanded="true" aria-label="Свернуть или развернуть: Внешние устройства компьютера">−</button></h3>
+  <div class="card-body">
+    <p class="explain">Назначение основных устройств ввода, вывода и хранения данных.</p>
+    <table class="data-table">
+      <tr><th>Устройство</th><th>Назначение</th></tr>
+      <tr><td>Монитор</td><td>Вывод текста, графики и видео</td></tr>
+      <tr><td>Клавиатура</td><td>Ввод текста, цифр и команд</td></tr>
+      <tr><td>Мышь</td><td>Управление указателем и выбор объектов</td></tr>
+      <tr><td>Принтер</td><td>Печать документов и изображений</td></tr>
+      <tr><td>Сканер</td><td>Перевод бумажных документов в цифровой вид</td></tr>
+      <tr><td>Колонки</td><td>Воспроизведение звука</td></tr>
+      <tr><td>Веб-камера</td><td>Передача и запись видео</td></tr>
+      <tr><td>Флеш-накопитель</td><td>Хранение и перенос файлов</td></tr>
+      <tr><td>Внешний жёсткий диск</td><td>Большие объёмы данных и резервное копирование</td></tr>
+    </table>
+  </div>
+</article>
+
+<article class="entry-card" data-work>
+  <h3><span>Компоненты материнской платы (схема)</span><button type="button" class="toggle-btn" aria-expanded="true" aria-label="Свернуть или развернуть: Компоненты материнской платы (схема)">−</button></h3>
+  <div class="card-body">
+    <p class="explain">Схема размещения основных компонентов на материнской плате.</p>
+    <div class="schema">
+    <img src="images/motherboard.png" alt="Компоненты материнской платы" loading="lazy">
+  </div>
+  </div>
+</article>
+
+<article class="entry-card" data-work>
+  <h3><span>Устройства учебного компьютера: свойства и возможные поломки</span><button type="button" class="toggle-btn" aria-expanded="true" aria-label="Свернуть или развернуть: Устройства учебного компьютера: свойства и возможные поломки">−</button></h3>
+  <div class="card-body">
+    <p class="explain">Результат просмотра состава компьютера: каждому устройству сопоставлены свойства, польза и типичная неисправность.</p>
+    <table class="data-table">
+      <tr><th>Устройство</th><th>Свойства</th><th>Польза</th><th>Поломки</th></tr>
+      <tr><td>Intel Core i5-9500F</td><td>6 ядер, 3.00 GHz</td><td>Обработка команд</td><td>Перегрев → очистить кулер</td></tr>
+      <tr><td>ОЗУ 4 GB 2400 MHz</td><td>Временное хранение</td><td>Работа программ</td><td>Нехватка → увеличить объём</td></tr>
+      <tr><td>NVIDIA Quadro P620</td><td>2 GB</td><td>Графика</td><td>Сбои → драйвер, охлаждение</td></tr>
+      <tr><td>Gigabyte H310M S2H</td><td>Чипсет H310</td><td>Связь компонентов</td><td>Порты → сервис</td></tr>
+      <tr><td>SSD PLEXTOR 256 GB</td><td>NVMe</td><td>Быстрая система</td><td>Ошибки → проверка, бэкап</td></tr>
+      <tr><td>BIOS AMI F12</td><td>13.08.2019</td><td>Запуск оборудования</td><td>Ошибки → настройки BIOS</td></tr>
+      <tr><td>Realtek GbE</td><td>Ethernet Up</td><td>Сеть</td><td>Нет связи → кабель, драйвер</td></tr>
+    </table>
+  </div>
+</article>
+
+<article class="entry-card" data-work>
+  <h3><span>Сравнение процессоров Intel, AMD и Apple Silicon</span><button type="button" class="toggle-btn" aria-expanded="true" aria-label="Свернуть или развернуть: Сравнение процессоров Intel, AMD и Apple Silicon">−</button></h3>
+  <div class="card-body">
+    <p class="explain">Три семейства процессоров сравниваются по назначению, архитектуре, энергопотреблению и графике.</p>
+    <table class="data-table">
+      <tr><th>Параметр</th><th>Intel (Core / Core Ultra)</th><th>AMD (Ryzen)</th><th>Apple Silicon (M)</th></tr>
+      <tr><td>Для чего чаще</td><td>Универсальные ПК, игры, тяжёлый софт</td><td>Игры, стриминг, графика, многозадачность</td><td>Экосистема Mac, монтаж, кодинг, автономность</td></tr>
+      <tr><td>Архитектура</td><td>Гибридная (мощные + экономичные ядра)</td><td>Классическая / разделение в новых чипах</td><td>Единая SoC (CPU + GPU + память)</td></tr>
+      <tr><td>Энергопотребление</td><td>Часто выше, сильный нагрев</td><td>Умеренное, энергоэффективные</td><td>Рекордно низкое</td></tr>
+      <tr><td>Встроенная графика</td><td>UHD / Iris / Arc (для игр слабая)</td><td>Radeon Graphics</td><td>Очень мощная</td></tr>
+      <tr><td>Сокет</td><td>Часто меняется</td><td>Долговечный (AM4 / AM5)</td><td>Впаяно, обновить нельзя</td></tr>
+    </table>
+  </div>
+</article>
+
+<article class="entry-card" data-work>
+  <h3><span>Характеристики оперативной памяти</span><button type="button" class="toggle-btn" aria-expanded="true" aria-label="Свернуть или развернуть: Характеристики оперативной памяти">−</button></h3>
+  <div class="card-body">
+    <p class="explain">Основные параметры ОЗУ, на которые смотрят при выборе и замене памяти.</p>
+    <table class="data-table">
+      <tr><th>Характеристика</th><th>Описание</th></tr>
+      <tr><td>Назначение</td><td>Временное хранение данных для работы ПК</td></tr>
+      <tr><td>Тип памяти</td><td>DDR, DDR2, DDR3, DDR4, DDR5</td></tr>
+      <tr><td>Объём</td><td>Количество данных одновременно (ГБ)</td></tr>
+      <tr><td>Скорость</td><td>Скорость передачи данных (MT/s)</td></tr>
+      <tr><td>Пропускная способность</td><td>Объём данных в секунду</td></tr>
+      <tr><td>Напряжение</td><td>DDR4 - 1,2 В; DDR5 - 1,1 В</td></tr>
+      <tr><td>Тайминги</td><td>Задержки при операциях с памятью</td></tr>
+      <tr><td>Форм-фактор</td><td>DIMM (ПК), SO-DIMM (ноутбуки)</td></tr>
+      <tr><td>ECC</td><td>Обнаружение и исправление ошибок</td></tr>
+      <tr><td>Охлаждение</td><td>Радиатор для отвода тепла</td></tr>
+      <tr><td>Совместимость</td><td>Должна поддерживаться платой и процессором</td></tr>
+    </table>
+  </div>
+</article>
+
+<article class="entry-card" data-work>
+  <h3><span>Подбор компьютера для студента</span><button type="button" class="toggle-btn" aria-expanded="true" aria-label="Свернуть или развернуть: Подбор компьютера для студента">−</button></h3>
+  <div class="card-body">
+    <p class="explain">Комплектующие и программы подобраны под задачи студента в рамках бюджета.</p>
+    <p><strong>Бюджет:</strong> 280 000 – 320 000 тг.</p>
+    <table class="data-table">
+      <tr><th>Компонент</th><th>Характеристики</th><th>Цена</th><th>Почему</th></tr>
+      <tr><td>Процессор</td><td>Intel Core i3-12100 + кулер</td><td>65–70 тыс.</td><td>4/8 потоков, UHD 730</td></tr>
+      <tr><td>Плата</td><td>H610M / B760M DDR4</td><td>40–50 тыс.</td><td>Недорогая, стабильная</td></tr>
+      <tr><td>ОЗУ</td><td>16 ГБ (2×8) DDR4-3200</td><td>25–35 тыс.</td><td>Многозадачность</td></tr>
+      <tr><td>SSD</td><td>512 ГБ – 1 ТБ NVMe</td><td>30–50 тыс.</td><td>Быстрая система</td></tr>
+      <tr><td>БП</td><td>450–500 Вт 80+ Bronze</td><td>15–20 тыс.</td><td>С запасом</td></tr>
+      <tr><td>Корпус</td><td>Mid/Micro-Tower с фильтрами</td><td>15–25 тыс.</td><td>Обдув</td></tr>
+      <tr><td>Монитор</td><td>24" IPS Full HD 75–100 Гц</td><td>50–70 тыс.</td><td>Комфорт</td></tr>
+      <tr><td>Клавиатура + мышь</td><td>Проводной комплект</td><td>8–15 тыс.</td><td>Надёжно</td></tr>
+    </table>
+    <p><strong>Итого системник:</strong> 190–230 тыс. + периферия</p>
+    <p><strong>ОС:</strong> Windows 11 Home или Ubuntu 24.04. Office / LibreOffice, браузер, Zoom/Teams, Defender + Malwarebytes.</p>
+  </div>
+</article>
+
+<article class="entry-card" data-work>
+  <h3><span>Подбор компьютера для бухгалтера</span><button type="button" class="toggle-btn" aria-expanded="true" aria-label="Свернуть или развернуть: Подбор компьютера для бухгалтера">−</button></h3>
+  <div class="card-body">
+    <p class="explain">Сборка для работы с 1С и Excel: упор на оперативную память и стабильность.</p>
+    <p><strong>Бюджет:</strong> 320 000 – 380 000 тг.</p>
+    <table class="data-table">
+      <tr><th>Компонент</th><th>Характеристики</th><th>Цена</th><th>Почему</th></tr>
+      <tr><td>Процессор</td><td>Ryzen 5 5600 / i5-12400</td><td>60–90 тыс.</td><td>6 ядер - 1С и Excel</td></tr>
+      <tr><td>Плата</td><td>B550 / B760</td><td>45–65 тыс.</td><td>Стабильная, много USB</td></tr>
+      <tr><td>ОЗУ</td><td>32 ГБ (2×16) DDR4-3200</td><td>45–60 тыс.</td><td>Критично для 1С</td></tr>
+      <tr><td>SSD</td><td>1 ТБ NVMe</td><td>45–70 тыс.</td><td>Быстро + запас</td></tr>
+      <tr><td>БП</td><td>500–550 Вт 80+ Bronze</td><td>18–25 тыс.</td><td>Тихий</td></tr>
+      <tr><td>Корпус</td><td>С фильтрами</td><td>20–30 тыс.</td><td>Меньше пыли</td></tr>
+      <tr><td>Монитор</td><td>27" IPS Full HD / 2K</td><td>70–100 тыс.</td><td>Больше места</td></tr>
+      <tr><td>Клавиатура + мышь</td><td>Эргономичные</td><td>12–20 тыс.</td><td>Комфорт</td></tr>
+      <tr><td>ИБП (опц.)</td><td>600–1000 ВА</td><td>25–40 тыс.</td><td>Защита от скачков</td></tr>
+    </table>
+    <p><strong>Итого системник:</strong> ≈ 220–280 тыс. + периферия</p>
+    <p><strong>ОС:</strong> Windows 11 Pro. 1С, Office, Adobe Reader / Foxit, 7-Zip, Kaspersky или Defender.</p>
+  </div>
+</article>
+
+<article class="entry-card" data-work>
+  <h3><span>Подбор компьютера для веб-разработчика</span><button type="button" class="toggle-btn" aria-expanded="true" aria-label="Свернуть или развернуть: Подбор компьютера для веб-разработчика">−</button></h3>
+  <div class="card-body">
+    <p class="explain">Сборка для веб-разработки: многопоточный процессор, много ОЗУ и быстрый SSD.</p>
+    <p><strong>Бюджет:</strong> 420 000 – 520 000 тг.</p>
+    <table class="data-table">
+      <tr><th>Компонент</th><th>Характеристики</th><th>Цена</th><th>Почему</th></tr>
+      <tr><td>Процессор</td><td>Ryzen 5 5600/7600 или i5-12400F/13400</td><td>60–110 тыс.</td><td>Многопоточность, Docker</td></tr>
+      <tr><td>Плата</td><td>B550 / B650 / B760</td><td>55–80 тыс.</td><td>Быстрая память, M.2</td></tr>
+      <tr><td>ОЗУ</td><td>32 ГБ DDR4/DDR5</td><td>50–80 тыс.</td><td>Docker + IDE</td></tr>
+      <tr><td>SSD</td><td>1 ТБ NVMe PCIe 4.0</td><td>50–80 тыс.</td><td>Быстрые сборки</td></tr>
+      <tr><td>Видеокарта</td><td>Встроенная или RTX 3050 / RX 6600</td><td>0 / 120–180 тыс.</td><td>Дизайн / 3D</td></tr>
+      <tr><td>БП</td><td>550–650 Вт Bronze/Gold</td><td>25–40 тыс.</td><td>Запас</td></tr>
+      <tr><td>Корпус</td><td>Mesh-перед</td><td>25–40 тыс.</td><td>Охлаждение</td></tr>
+      <tr><td>Монитор</td><td>27" 1440p или 2×24"</td><td>90–140 тыс.</td><td>Продуктивность</td></tr>
+      <tr><td>Клавиатура + мышь</td><td>Механика + хорошая мышь</td><td>20–40 тыс.</td><td>Комфорт</td></tr>
+    </table>
+    <p><strong>Итого системник:</strong> ≈ 280–380 тыс. + периферия</p>
+    <p><strong>ОС и ПО:</strong> Windows 11 Pro + WSL2 или Ubuntu. VS Code / WebStorm, Node.js, Git, Docker, Chrome/Firefox/Edge, Postman, Figma.</p>
+  </div>
+</article>
+
+<article class="entry-card" data-work>
+  <h3><span>Диагностика накопителя</span><button type="button" class="toggle-btn" aria-expanded="true" aria-label="Свернуть или развернуть: Диагностика накопителя">−</button></h3>
+  <div class="card-body">
+    <p class="explain">Двенадцать шагов проверки накопителя: от осмотра до вывода «исправен, наблюдать или заменить».</p>
+    <ol>
+      <li>Осмотреть на повреждения.</li>
+      <li>Проверить подключение.</li>
+      <li>Убедиться, что система определяет накопитель.</li>
+      <li>Проверить объём и свободное место.</li>
+      <li>Проверить состояние в CrystalDiskInfo.</li>
+      <li>Посмотреть показатели S.M.A.R.T.</li>
+      <li>Проверить диск средствами Windows.</li>
+      <li>При необходимости проверить файловую систему.</li>
+      <li>Проверить скорость чтения/записи.</li>
+      <li>Посмотреть журнал ошибок системы.</li>
+      <li>Сохранить важные данные на другой носитель.</li>
+      <li>Сделать вывод: исправен / требует наблюдения / заменить.</li>
+    </ol>
+  </div>
+</article>
+
+<article class="entry-card" data-work>
+  <h3><span>Диагностика клавиатуры и мыши</span><button type="button" class="toggle-btn" aria-expanded="true" aria-label="Свернуть или развернуть: Диагностика клавиатуры и мыши">−</button></h3>
+  <div class="card-body">
+    <p class="explain">Проверка идёт от простого (кабель, порт) к сложному (драйверы, замена).</p>
+    <ol>
+      <li>Проверить внешний вид и отсутствие повреждений.</li>
+      <li>Проверить подключение кабеля или USB-приёмника.</li>
+      <li>Для беспроводных - заряд батареи и питание.</li>
+      <li>Переподключить или подключить к другому порту.</li>
+      <li>Перезагрузить компьютер.</li>
+      <li>Проверить на другом компьютере.</li>
+      <li>Проверить Диспетчер устройств на ошибки драйвера.</li>
+      <li>Обновить или переустановить драйвер.</li>
+      <li>Проверить все клавиши / кнопки / колёсико.</li>
+      <li>Определить причину неисправности.</li>
+      <li>При аппаратной поломке - ремонт или замена.</li>
+      <li>Повторно проверить работу.</li>
+    </ol>
+  </div>
+</article>
+
+<article class="entry-card" data-work>
+  <h3><span>Проверка клавиатуры и мыши: результаты</span><button type="button" class="toggle-btn" aria-expanded="true" aria-label="Свернуть или развернуть: Проверка клавиатуры и мыши: результаты">−</button></h3>
+  <div class="card-body">
+    <p class="explain">Результат проверки: все клавиши и кнопки работают исправно.</p>
+    <table class="data-table">
+      <tr><th>Устройство</th><th>Проверка</th><th>Результат</th></tr>
+      <tr><td>Клавиатура</td><td>Все клавиши по очереди</td><td>Работают</td></tr>
+      <tr><td>Клавиатура</td><td>Одновременное нажатие 3–4 клавиш</td><td>Работают</td></tr>
+      <tr><td>NumPad</td><td>Цифровой блок</td><td>Работает</td></tr>
+      <tr><td>Мышь</td><td>30 нажатий левой кнопки</td><td>Работает</td></tr>
+      <tr><td>Мышь</td><td>Правая и средняя кнопки</td><td>Работают</td></tr>
+      <tr><td>Мышь</td><td>Колёсико</td><td>Работает</td></tr>
+      <tr><td>Мышь</td><td>Двойные клики</td><td>Ложных нет</td></tr>
+    </table>
+  </div>
+</article>
+
+<article class="entry-card" data-work>
+  <h3><span>Настройка принтера или монитора</span><button type="button" class="toggle-btn" aria-expanded="true" aria-label="Свернуть или развернуть: Настройка принтера или монитора">−</button></h3>
+  <div class="card-body">
+    <p class="explain">Как подключить и настроить принтер или монитор в Windows.</p>
+    <ol>
+      <li>Подключить устройство и включить.</li>
+      <li>Проверить кабели и питание.</li>
+      <li>Дождаться обнаружения системой.</li>
+      <li>Принтер: Параметры → Bluetooth и устройства → Принтеры и сканеры. Монитор: Параметры → Система → Дисплей.</li>
+      <li>Если не найден - «Добавить устройство» / «Обнаружить».</li>
+      <li>Установить или обновить драйвер.</li>
+      <li>Настроить параметры печати / разрешение и масштаб.</li>
+      <li>Проверить работу (пробная страница / изображение).</li>
+    </ol>
+  </div>
+</article>
+
+<article class="entry-card" data-work>
+  <h3><span>Регулярное обслуживание компьютера</span><button type="button" class="toggle-btn" aria-expanded="true" aria-label="Свернуть или развернуть: Регулярное обслуживание компьютера">−</button></h3>
+  <div class="card-body">
+    <p class="explain">Список регулярных действий, которые продлевают срок службы компьютера.</p>
+    <ol>
+      <li>Очистка корпуса от пыли.</li>
+      <li>Очистка внутренних компонентов (после отключения питания).</li>
+      <li>Проверка системы охлаждения.</li>
+      <li>Проверка кабелей и разъёмов.</li>
+      <li>Проверка накопителя на ошибки.</li>
+      <li>Диагностика оперативной памяти.</li>
+      <li>Обновление операционной системы.</li>
+      <li>Обновление антивируса и проверка ПК.</li>
+      <li>Удаление ненужных файлов.</li>
+      <li>Проверка автозагрузки.</li>
+      <li>Резервное копирование важных файлов.</li>
+      <li>Проверка периферийных устройств.</li>
+    </ol>
+  </div>
+</article>
+
+<article class="entry-card" data-work>
+  <h3><span>Алгоритм устранения неисправности периферии</span><button type="button" class="toggle-btn" aria-expanded="true" aria-label="Свернуть или развернуть: Алгоритм устранения неисправности периферии">−</button></h3>
+  <div class="card-body">
+    <p class="explain">Универсальный порядок поиска и устранения неисправности периферийного устройства.</p>
+    <ol>
+      <li>Определить неисправное устройство.</li>
+      <li>Проверить питание.</li>
+      <li>Проверить подключение.</li>
+      <li>Переподключить устройство.</li>
+      <li>Проверить другой порт.</li>
+      <li>Перезагрузить компьютер.</li>
+      <li>Проверить настройки системы.</li>
+      <li>Проверить и обновить драйверы.</li>
+      <li>Проверить на другом компьютере.</li>
+      <li>Подвести итог: подключение / настройки / драйверы / само устройство.</li>
+    </ol>
+  </div>
+</article>
+
+<article class="entry-card" data-work>
+  <h3><span>Типовые неисправности монитора</span><button type="button" class="toggle-btn" aria-expanded="true" aria-label="Свернуть или развернуть: Типовые неисправности монитора">−</button></h3>
+  <div class="card-body">
+    <p class="explain">Десять неисправностей монитора с признаками и вероятными причинами.</p>
+    <table class="data-table">
+      <tr><th>Неисправность</th><th>Признаки</th><th>Возможные причины</th></tr>
+      <tr><td>Не включается</td><td>Индикатор не горит</td><td>Нет питания, повреждён кабель/БП</td></tr>
+      <tr><td>Нет изображения</td><td>Чёрный экран</td><td>Неверный вход, кабель, проблема с ПК</td></tr>
+      <tr><td>Мерцание</td><td>Изображение мигает</td><td>Видеодрайвер, кабель, частота обновления</td></tr>
+      <tr><td>Размытое изображение</td><td>Нечёткий текст</td><td>Неверное разрешение, плохой контакт</td></tr>
+      <tr><td>Полосы на экране</td><td>Линии</td><td>Кабель, матрица, электроника</td></tr>
+      <tr><td>Искажение цветов</td><td>Неправильные цвета</td><td>Кабель, контакт, матрица</td></tr>
+      <tr><td>Тёмный экран</td><td>Плохо видно</td><td>Низкая яркость, подсветка</td></tr>
+      <tr><td>Битые пиксели</td><td>Точки одного цвета</td><td>Повреждение матрицы</td></tr>
+      <tr><td>Отключается</td><td>Экран гаснет</td><td>Питание, кабель, внутренние компоненты</td></tr>
+      <tr><td>«Нет сигнала»</td><td>No Signal</td><td>Нет видеосигнала, неверный вход</td></tr>
+    </table>
+  </div>
+</article>
+
+<article class="entry-card" data-work>
+  <h3><span>Неисправности микрофона, колонок и гарнитуры</span><button type="button" class="toggle-btn" aria-expanded="true" aria-label="Свернуть или развернуть: Неисправности микрофона, колонок и гарнитуры">−</button></h3>
+  <div class="card-body">
+    <p class="explain">Типовые неисправности звуковых устройств и общие причины их появления.</p>
+    <p><strong>Микрофон:</strong> не работает, тихий звук, шумы, искажение, прерывистый звук, не обнаруживается, эхо, не работает в приложении.</p>
+    <p><strong>Колонки:</strong> не включаются, нет звука, тихий звук, хрип/треск, одна колонка, пропадание звука, гул, не обнаруживаются.</p>
+    <p><strong>Гарнитура:</strong> нет звука, не работает микрофон, тихий звук, хрип, прерывание, эхо, не обнаруживается, быстро разряжается, не работают кнопки.</p>
+    <p>Основные причины: подключение, настройки, драйверы, повреждение кабеля, батарея, помехи.</p>
+  </div>
+</article>
+
+<article class="entry-card" data-work>
+  <h3><span>Неисправности веб-камеры</span><button type="button" class="toggle-btn" aria-expanded="true" aria-label="Свернуть или развернуть: Неисправности веб-камеры">−</button></h3>
+  <div class="card-body">
+    <p class="explain">Неисправности веб-камеры, их признаки и способы устранения.</p>
+    <table class="data-table">
+      <tr><th>Неисправность</th><th>Признаки</th><th>Устранение</th></tr>
+      <tr><td>Не включается</td><td>Индикатор не горит</td><td>Питание, кабель, USB-порт</td></tr>
+      <tr><td>Не обнаруживается</td><td>Нет в списке устройств</td><td>Переподключить, драйвер, другой порт</td></tr>
+      <tr><td>Чёрный экран</td><td>Нет изображения</td><td>Объектив, настройки, подключение</td></tr>
+      <tr><td>Размытое изображение</td><td>Нечёткая картинка</td><td>Очистить объектив, настроить фокус</td></tr>
+      <tr><td>Плохое качество</td><td>Тёмная/зернистая</td><td>Освещение, настройки</td></tr>
+      <tr><td>Не работает в приложении</td><td>Нет видео</td><td>Разрешить доступ, выбрать устройство</td></tr>
+      <tr><td>Занята другим приложением</td><td>Сообщение об использовании</td><td>Закрыть другие программы</td></tr>
+      <tr><td>Ошибка драйвера</td><td>Не запускается</td><td>Обновить / переустановить драйвер</td></tr>
+      <tr><td>Нет доступа</td><td>Нет разрешения</td><td>Включить доступ в конфиденциальности Windows</td></tr>
+    </table>
+  </div>
+</article>
+
+<article class="entry-card" data-work>
+  <h3><span>Комплексный алгоритм ремонта периферии</span><button type="button" class="toggle-btn" aria-expanded="true" aria-label="Свернуть или развернуть: Комплексный алгоритм ремонта периферии">−</button></h3>
+  <div class="card-body">
+    <p class="explain">Шесть этапов ремонта: от первичного осмотра до записи результата.</p>
+    <table class="data-table">
+      <tr><th>Этап</th><th>Действия</th></tr>
+      <tr><td>Первичный осмотр</td><td>Корпус, кабели, разъёмы, питание</td></tr>
+      <tr><td>Диагностика</td><td>Подключение, настройки, драйверы</td></tr>
+      <tr><td>Выявление причины</td><td>Переподключение, другой порт/ПК</td></tr>
+      <tr><td>Устранение</td><td>Настройки, драйвер, замена кабеля</td></tr>
+      <tr><td>Проверка работы</td><td>Основные функции устройства</td></tr>
+      <tr><td>Контроль</td><td>Убедиться в исправности, записать результат</td></tr>
+    </table>
+  </div>
+</article>
+
+<article class="entry-card" data-work>
+  <h3><span>Ремонт сетевого кабеля</span><button type="button" class="toggle-btn" aria-expanded="true" aria-label="Свернуть или развернуть: Ремонт сетевого кабеля">−</button></h3>
+  <div class="card-body">
+    <p class="explain">Порядок проверки и ремонта сетевого кабеля от простого к сложному.</p>
+    <ol>
+      <li>Проверить плотность подключения в ПК и роутере, переткнуть в другой разъём.</li>
+      <li>Осмотреть кабель на перегибы, порезы, сломанную защёлку.</li>
+      <li>Сломанный штекер - обрезать и обжать новый (или вызвать мастера).</li>
+      <li>Кабель перебит посередине - лучше заменить целиком или соединить переходником RJ-45.</li>
+      <li>Убедиться, что загорелись индикаторы и интернет заработал.</li>
+    </ol>
+  </div>
+</article>
+</main>
+
+<footer class="site-footer">
+  <p>Толеутай Амирхан · группа 2-135 W-D</p>
+  <p>© 2026 · Учебный проект: сайт создан в образовательных целях</p>
+  <p><a href="admin.html">Вход для владельца</a> · <a href="https://github.com/playboicarti1629-doc/amirkhan-site" target="_blank" rel="noopener">Код сайта на GitHub</a></p>
+</footer>
+
+<dialog id="lightbox" class="lightbox" aria-label="Увеличенное изображение">
+  <img src="" alt="">
+  <p></p>
+  <button type="button" class="btn" data-close>Закрыть</button>
+</dialog>
+<script src="js/main.js" defer></script>
+</body>
+</html>
