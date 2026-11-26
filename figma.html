@@ -5,30 +5,42 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Прототипы в Figma — Толеутай Амирхан</title>
   <meta name="description" content="Три интерактивных прототипа мобильных приложений, созданные в Figma.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
   <script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}</script>
 </head>
 <body>
 
-<header class="site-header">
-  <button type="button" class="theme-toggle" id="themeToggle" aria-pressed="false">☾ Тёмная тема</button>
-  <h1>Прототипы в Figma</h1>
-  <p>Толеутай Амирхан · Web Design · группа 2-135 W-D</p>
+<header class="topbar">
+  <div class="topbar-inner">
+    <a href="index.html" class="logo">АМИРХАН<span class="logo-star">★</span></a>
+    <nav class="site-nav" id="siteNav" aria-label="Основное меню">
+      <a href="index.html">Главная</a>
+      <a href="safety.html" title="Техника безопасности">Безопасность</a>
+      <a href="hardware.html">Оборудование</a>
+      <a href="software.html">ОС и ПО</a>
+      <a href="security.html" title="Информационная безопасность">Инфобезопасность</a>
+      <a href="blender.html">Blender</a>
+      <a href="figma.html" class="active" aria-current="page">Figma</a>
+      <a href="ux-ui.html">UX/UI</a>
+      <a href="html-css.html" title="HTML, CSS и JS">HTML · CSS · JS</a>
+      <a href="reviews.html">Отзывы</a>
+    </nav>
+    <div class="topbar-tools">
+      <button type="button" class="theme-toggle" id="themeToggle" aria-pressed="false">☾ Тёмная тема</button>
+      <button type="button" class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="siteNav">☰ Меню</button>
+    </div>
+  </div>
 </header>
 
-<button type="button" class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="siteNav">☰ Меню</button>
-<nav class="site-nav" id="siteNav" aria-label="Основное меню">
-    <a href="index.html">Главная</a>
-    <a href="safety.html">Техника безопасности</a>
-    <a href="hardware.html">Оборудование</a>
-    <a href="software.html">ОС и ПО</a>
-    <a href="security.html">Информационная безопасность</a>
-    <a href="blender.html">Blender</a>
-    <a href="figma.html" class="active" aria-current="page">Figma</a>
-    <a href="ux-ui.html">UX/UI</a>
-    <a href="html-css.html">HTML, CSS и JS</a>
-    <a href="reviews.html">Отзывы</a>
-</nav>
+<section class="page-hero">
+  <div class="page-hero-inner">
+    <div class="hero-badge">Толеутай Амирхан · Web Design · группа 2-135 W-D</div>
+    <h1>Прототипы в Figma</h1>
+  </div>
+</section>
 
 <main class="page-content" id="content">
 <h2 class="section-title">Прототипы в Figma</h2>
@@ -59,6 +71,7 @@
 </main>
 
 <footer class="site-footer">
+  <div class="footer-logo">АМИРХАН<span>★</span></div>
   <p>Толеутай Амирхан · группа 2-135 W-D</p>
   <p>© 2026 · Учебный проект: сайт создан в образовательных целях</p>
   <p><a href="admin.html">Вход для владельца</a> · <a href="https://github.com/playboicarti1629-doc/amirkhan-site" target="_blank" rel="noopener">Код сайта на GitHub</a></p>

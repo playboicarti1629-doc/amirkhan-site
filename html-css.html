@@ -5,30 +5,42 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Технологии сайта — Толеутай Амирхан</title>
   <meta name="description" content="Какие HTML-элементы, CSS-свойства и JavaScript-функции использованы на сайте.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
   <script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}</script>
 </head>
 <body>
 
-<header class="site-header">
-  <button type="button" class="theme-toggle" id="themeToggle" aria-pressed="false">☾ Тёмная тема</button>
-  <h1>HTML, CSS и JavaScript</h1>
-  <p>Толеутай Амирхан · Web Design · группа 2-135 W-D</p>
+<header class="topbar">
+  <div class="topbar-inner">
+    <a href="index.html" class="logo">АМИРХАН<span class="logo-star">★</span></a>
+    <nav class="site-nav" id="siteNav" aria-label="Основное меню">
+      <a href="index.html">Главная</a>
+      <a href="safety.html" title="Техника безопасности">Безопасность</a>
+      <a href="hardware.html">Оборудование</a>
+      <a href="software.html">ОС и ПО</a>
+      <a href="security.html" title="Информационная безопасность">Инфобезопасность</a>
+      <a href="blender.html">Blender</a>
+      <a href="figma.html">Figma</a>
+      <a href="ux-ui.html">UX/UI</a>
+      <a href="html-css.html" class="active" aria-current="page" title="HTML, CSS и JS">HTML · CSS · JS</a>
+      <a href="reviews.html">Отзывы</a>
+    </nav>
+    <div class="topbar-tools">
+      <button type="button" class="theme-toggle" id="themeToggle" aria-pressed="false">☾ Тёмная тема</button>
+      <button type="button" class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="siteNav">☰ Меню</button>
+    </div>
+  </div>
 </header>
 
-<button type="button" class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="siteNav">☰ Меню</button>
-<nav class="site-nav" id="siteNav" aria-label="Основное меню">
-    <a href="index.html">Главная</a>
-    <a href="safety.html">Техника безопасности</a>
-    <a href="hardware.html">Оборудование</a>
-    <a href="software.html">ОС и ПО</a>
-    <a href="security.html">Информационная безопасность</a>
-    <a href="blender.html">Blender</a>
-    <a href="figma.html">Figma</a>
-    <a href="ux-ui.html">UX/UI</a>
-    <a href="html-css.html" class="active" aria-current="page">HTML, CSS и JS</a>
-    <a href="reviews.html">Отзывы</a>
-</nav>
+<section class="page-hero">
+  <div class="page-hero-inner">
+    <div class="hero-badge">Толеутай Амирхан · Web Design · группа 2-135 W-D</div>
+    <h1>HTML, CSS и JavaScript</h1>
+  </div>
+</section>
 
 <main class="page-content" id="content">
 <h2 class="section-title">Технологии сайта</h2>
@@ -37,8 +49,8 @@
 <h2 class="section-title">HTML-элементы</h2>
 <article class="entry-card" data-work>
   <h3><span>&lt;header&gt;</span></h3>
-  <p class="explain">Шапка страницы: заголовок и подпись автора.</p>
-  <pre class="code-block"><code>&lt;header class=&quot;site-header&quot;&gt;</code></pre>
+  <p class="explain">Верхняя панель страницы: логотип, меню и кнопка смены темы.</p>
+  <pre class="code-block"><code>&lt;header class=&quot;topbar&quot;&gt;</code></pre>
 </article>
 <article class="entry-card" data-work>
   <h3><span>&lt;nav&gt;</span></h3>
@@ -119,101 +131,102 @@
 <h2 class="section-title">CSS-свойства</h2>
 <article class="entry-card" data-work>
   <h3><span>display: flex</span></h3>
-  <p class="explain">Располагает элементы в строку с переносом; на нём построено меню.</p>
-  <p><strong>Как повлияло на сайт:</strong> Пункты меню выстраиваются в центре, а на узком экране переносятся на новую строку.</p>
-  <pre class="code-block"><code>.site-nav {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 11px;</code></pre>
+  <p class="explain">Располагает элементы в строку; на нём построено меню.</p>
+  <p><strong>Как повлияло на сайт:</strong> Пункты меню стоят в одну строку, а на узком экране прячутся за кнопку.</p>
+  <pre class="code-block"><code>.site-nav { display: flex; flex-wrap: nowrap; gap: 6px 15px; margin: 0; padding: 0; }</code></pre>
 </article>
+
 <article class="entry-card" data-work>
   <h3><span>display: grid</span></h3>
-  <p class="explain">Делит блок на колонки; нужен для адаптивной сетки карточек.</p>
-  <p><strong>Как повлияло на сайт:</strong> Карточки разделов сами подбирают число колонок под ширину экрана.</p>
-  <pre class="code-block"><code>.card-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 20px;</code></pre>
+  <p class="explain">Делит блок на колонки; нужен для сетки карточек.</p>
+  <p><strong>Как повлияло на сайт:</strong> Карточки разделов стоят в три колонки, а на узких экранах — в две и в одну.</p>
+  <pre class="code-block"><code>.card-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin: 0 0 40px; }</code></pre>
 </article>
+
 <article class="entry-card" data-work>
   <h3><span>box-shadow</span></h3>
-  <p class="explain">Рисует тень; здесь — жёсткая «нео-брутальная» тень без размытия.</p>
-  <p><strong>Как повлияло на сайт:</strong> Карточки и кнопки выглядят приподнятыми над страницей.</p>
-  <pre class="code-block"><code>--shadow-small: 4px 4px 0 var(--ink);</code></pre>
-<pre class="code-block"><code>box-shadow: var(--shadow-small);</code></pre>
+  <p class="explain">Рисует тень вокруг блока.</p>
+  <p><strong>Как повлияло на сайт:</strong> Уведомление отбрасывает мягкую тень и выделяется на странице.</p>
+  <pre class="code-block"><code>box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);</code></pre>
 </article>
+
 <article class="entry-card" data-work>
   <h3><span>border</span></h3>
   <p class="explain">Задаёт рамку элемента.</p>
-  <p><strong>Как повлияло на сайт:</strong> Толстая чёрная рамка стала главной чертой стиля и отделяет блоки друг от друга.</p>
-  <pre class="code-block"><code>--line: 3px solid var(--ink);</code></pre>
-<pre class="code-block"><code>border: var(--line);</code></pre>
+  <p><strong>Как повлияло на сайт:</strong> Тонкая тёмная рамка отделяет карточки от фона, не перегружая страницу.</p>
+  <pre class="code-block"><code>border: 1px solid var(--border);</code></pre>
 </article>
+
 <article class="entry-card" data-work>
   <h3><span>transition и transform</span></h3>
   <p class="explain">Плавно меняют положение элемента при наведении.</p>
-  <p><strong>Как повлияло на сайт:</strong> Карточка сдвигается вверх-влево при наведении — это обратная связь для пользователя.</p>
-  <pre class="code-block"><code>transition: transform .12s ease, box-shadow .12s ease;</code></pre>
-<pre class="code-block"><code>.entry-card:hover { transform: translate(-2px, -2px); box-shadow: 6px 6px 0 var(--ink); }</code></pre>
+  <p><strong>Как повлияло на сайт:</strong> Карточка раздела приподнимается при наведении — это обратная связь для пользователя.</p>
+  <pre class="code-block"><code>transition: transform 0.3s ease, border-color 0.3s, background 0.3s;</code></pre>
+  <pre class="code-block"><code>.topic-card:hover { transform: translateY(-6px); border-color: var(--border-strong); background: var(--bg-hover); }</code></pre>
 </article>
+
 <article class="entry-card" data-work>
   <h3><span>Пользовательские свойства (--)</span></h3>
-  <p class="explain">Хранят значения, которые можно переиспользовать, в том числе для тёмной темы.</p>
-  <p><strong>Как повлияло на сайт:</strong> Цвета объявлены один раз; тёмная тема просто подменяет их.</p>
-  <pre class="code-block"><code>--yellow: #FFDE59;</code></pre>
-<pre class="code-block"><code>[data-theme=&quot;dark&quot;] {
-  color-scheme: dark;
-  --paper: #15161a;</code></pre>
+  <p class="explain">Хранят значения, которые можно переиспользовать, в том числе для светлой темы.</p>
+  <p><strong>Как повлияло на сайт:</strong> Цвета объявлены один раз; светлая тема просто подменяет их.</p>
+  <pre class="code-block"><code>--accent: #ffcc00;</code></pre>
+  <pre class="code-block"><code>[data-theme=&quot;light&quot;] {
+  color-scheme: light;
+  --bg: #f6f4ee;</code></pre>
 </article>
+
 <article class="entry-card" data-work>
   <h3><span>clamp()</span></h3>
   <p class="explain">Ограничивает размер значением «минимум — желаемое — максимум».</p>
-  <p><strong>Как повлияло на сайт:</strong> Заголовок плавно становится больше или меньше вместе с шириной окна.</p>
-  <pre class="code-block"><code>font-size: clamp(25px, 4vw, 42px);</code></pre>
+  <p><strong>Как повлияло на сайт:</strong> Заголовок страницы плавно становится больше или меньше вместе с шириной окна.</p>
+  <pre class="code-block"><code>font-size: clamp(2.2rem, 6vw, 4.2rem);</code></pre>
 </article>
+
 <article class="entry-card" data-work>
   <h3><span>@media</span></h3>
   <p class="explain">Применяет правила только при нужных условиях, например на узком экране.</p>
-  <p><strong>Как повлияло на сайт:</strong> Для телефонов меняются отступы и размер шрифта.</p>
+  <p><strong>Как повлияло на сайт:</strong> На телефоне меняются отступы и размер шрифта, а карточки встают в одну колонку.</p>
   <pre class="code-block"><code>@media (max-width: 700px) {
-  body { padding: 18px 12px 34px; font-size: 15px; }</code></pre>
+  body { font-size: 15px; }</code></pre>
 </article>
+
 <article class="entry-card" data-work>
-  <h3><span>position: absolute</span></h3>
-  <p class="explain">Помещает элемент в заданное место внутри родителя.</p>
-  <p><strong>Как повлияло на сайт:</strong> Кнопка смены темы закреплена в правом верхнем углу шапки.</p>
-  <pre class="code-block"><code>.theme-toggle {
-  position: absolute;
-  top: 12px;
-  right: 12px;</code></pre>
+  <h3><span>position: fixed</span></h3>
+  <p class="explain">Закрепляет элемент в одном месте экрана.</p>
+  <p><strong>Как повлияло на сайт:</strong> Верхняя панель с меню остаётся на месте, когда страница прокручивается.</p>
+  <pre class="code-block"><code>.topbar {
+  position: fixed;
+  top: 0;</code></pre>
 </article>
+
 <article class="entry-card" data-work>
   <h3><span>overflow-x</span></h3>
   <p class="explain">Управляет тем, что происходит с содержимым, не помещающимся по ширине.</p>
   <p><strong>Как повлияло на сайт:</strong> Широкая таблица в админ-панели прокручивается, а не ломает страницу.</p>
   <pre class="code-block"><code>.admin-table-wrap { overflow-x: auto; margin: 0 0 30px; }</code></pre>
 </article>
+
 <article class="entry-card" data-work>
-  <h3><span>background-image</span></h3>
-  <p class="explain">Рисует фон-картинку или градиент.</p>
-  <p><strong>Как повлияло на сайт:</strong> Фон страницы — точечная сетка из радиального градиента, без картинок.</p>
-  <pre class="code-block"><code>background-image: radial-gradient(var(--dot) 0.8px, transparent 0.8px);
-  background-size: 17px 17px;</code></pre>
+  <h3><span>radial-gradient</span></h3>
+  <p class="explain">Рисует фон из плавного цветового перехода.</p>
+  <p><strong>Как повлияло на сайт:</strong> Фон главного экрана — мягкие цветные пятна, обычных картинок нет.</p>
+  <pre class="code-block"><code>radial-gradient(ellipse at 70% 40%, var(--glow-1), transparent 50%),</code></pre>
 </article>
+
 <article class="entry-card" data-work>
   <h3><span>text-transform</span></h3>
   <p class="explain">Меняет регистр букв без изменения текста в HTML.</p>
   <p><strong>Как повлияло на сайт:</strong> Главный заголовок отображается прописными буквами.</p>
-  <pre class="code-block"><code>font-weight: 900;
-  letter-spacing: -.04em;
+  <pre class="code-block"><code>font-weight: 700;
+  line-height: 0.95;
+  letter-spacing: 0.03em;
   text-transform: uppercase;</code></pre>
 </article>
 
 <h2 class="section-title">JavaScript и интерактивность</h2>
 <article class="entry-card" data-work>
   <h3><span>Переключение светлой и тёмной темы</span></h3>
-  <p class="explain">Кнопка в шапке меняет атрибут data-theme у страницы, а выбор сохраняется в браузере.</p>
+  <p class="explain">Кнопка в верхней панели меняет атрибут data-theme у страницы, а выбор сохраняется в браузере.</p>
   <pre class="code-block"><code>document.documentElement.setAttribute(&#x27;data-theme&#x27;, theme);</code></pre>
 </article>
 <article class="entry-card" data-work>
@@ -244,6 +257,7 @@
 </main>
 
 <footer class="site-footer">
+  <div class="footer-logo">АМИРХАН<span>★</span></div>
   <p>Толеутай Амирхан · группа 2-135 W-D</p>
   <p>© 2026 · Учебный проект: сайт создан в образовательных целях</p>
   <p><a href="admin.html">Вход для владельца</a> · <a href="https://github.com/playboicarti1629-doc/amirkhan-site" target="_blank" rel="noopener">Код сайта на GitHub</a></p>

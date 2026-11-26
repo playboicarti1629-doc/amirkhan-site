@@ -5,30 +5,42 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Принципы UX/UI — Толеутай Амирхан</title>
   <meta name="description" content="Восемь принципов UX/UI и примеры их применения в портфолио.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
   <script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}</script>
 </head>
 <body>
 
-<header class="site-header">
-  <button type="button" class="theme-toggle" id="themeToggle" aria-pressed="false">☾ Тёмная тема</button>
-  <h1>Принципы UX/UI</h1>
-  <p>Толеутай Амирхан · Web Design · группа 2-135 W-D</p>
+<header class="topbar">
+  <div class="topbar-inner">
+    <a href="index.html" class="logo">АМИРХАН<span class="logo-star">★</span></a>
+    <nav class="site-nav" id="siteNav" aria-label="Основное меню">
+      <a href="index.html">Главная</a>
+      <a href="safety.html" title="Техника безопасности">Безопасность</a>
+      <a href="hardware.html">Оборудование</a>
+      <a href="software.html">ОС и ПО</a>
+      <a href="security.html" title="Информационная безопасность">Инфобезопасность</a>
+      <a href="blender.html">Blender</a>
+      <a href="figma.html">Figma</a>
+      <a href="ux-ui.html" class="active" aria-current="page">UX/UI</a>
+      <a href="html-css.html" title="HTML, CSS и JS">HTML · CSS · JS</a>
+      <a href="reviews.html">Отзывы</a>
+    </nav>
+    <div class="topbar-tools">
+      <button type="button" class="theme-toggle" id="themeToggle" aria-pressed="false">☾ Тёмная тема</button>
+      <button type="button" class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="siteNav">☰ Меню</button>
+    </div>
+  </div>
 </header>
 
-<button type="button" class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="siteNav">☰ Меню</button>
-<nav class="site-nav" id="siteNav" aria-label="Основное меню">
-    <a href="index.html">Главная</a>
-    <a href="safety.html">Техника безопасности</a>
-    <a href="hardware.html">Оборудование</a>
-    <a href="software.html">ОС и ПО</a>
-    <a href="security.html">Информационная безопасность</a>
-    <a href="blender.html">Blender</a>
-    <a href="figma.html">Figma</a>
-    <a href="ux-ui.html" class="active" aria-current="page">UX/UI</a>
-    <a href="html-css.html">HTML, CSS и JS</a>
-    <a href="reviews.html">Отзывы</a>
-</nav>
+<section class="page-hero">
+  <div class="page-hero-inner">
+    <div class="hero-badge">Толеутай Амирхан · Web Design · группа 2-135 W-D</div>
+    <h1>Принципы UX/UI</h1>
+  </div>
+</section>
 
 <main class="page-content" id="content">
 <h2 class="section-title">Принципы UX/UI в моих работах</h2>
@@ -37,7 +49,7 @@
 <article class="entry-card" data-work>
   <h3><span>1. Визуальная иерархия</span></h3>
   <p><strong>Для чего:</strong> Чтобы посетитель сразу видел, что главное, а что второстепенное, и читал страницу в нужном порядке.</p>
-  <p><strong>Как применено у меня:</strong> Название страницы самое крупное и стоит на жёлтом блоке. Заголовки разделов поменьше, на тёмной плашке, а заголовки карточек ещё скромнее. Чем меньше важность, тем меньше и тоньше шрифт.</p>
+  <p><strong>Как применено у меня:</strong> Название страницы самое крупное, оно стоит на фоне с мягким цветным свечением. Заголовки разделов поменьше, с жёлтым квадратиком и линией, а заголовки карточек ещё скромнее. Чем меньше важность, тем меньше шрифт.</p>
   <div class="example-box"><p class="label">Пример с этого сайта</p>
     <h4 style="margin:0 0 6px;font-size:19px">Заголовок карточки (уровень 3)</h4>
     <p class="explain">Пояснение к работе — мельче и на отдельном фоне.</p>
@@ -48,13 +60,13 @@
 <article class="entry-card" data-work>
   <h3><span>2. Контрастность</span></h3>
   <p><strong>Для чего:</strong> Чтобы текст было легко читать. Чем сильнее цвет текста отличается от цвета фона, тем лучше его видно. А яркие цвета помогают выделить важное.</p>
-  <p><strong>Как применено у меня:</strong> На светлых карточках у меня чёрный текст, а вокруг толстые чёрные рамки. Яркие жёлтый, зелёный и коралловый цвета я использую для важных мест: шапки, подвала, кнопок и примечаний. В тёмной теме фон становится тёмным, а текст светлым, поэтому читать всё равно удобно.</p>
+  <p><strong>Как применено у меня:</strong> Фон у меня почти чёрный, а текст белый, поэтому читать удобно. Жёлтый цвет я использую только для главного: кнопки, активный пункт меню, цифры и значки. В светлой теме всё наоборот: тёмный текст на светлом фоне.</p>
   <div class="example-box"><p class="label">Пример с этого сайта</p>
     <div class="swatches">
-      <div class="swatch" style="background:#FFFDF7;color:#111111">Текст на карточке</div>
-      <div class="swatch" style="background:#FFDE59;color:#111111">Текст на жёлтой шапке</div>
-      <div class="swatch" style="background:#7ED957;color:#111111">Текст на зелёном подвале</div>
-      <div class="swatch" style="background:#20222A;color:#F2EFE6">Текст на карточке в тёмной теме</div>
+      <div class="swatch" style="background:#161616;color:#ffffff">Белый текст на карточке</div>
+      <div class="swatch" style="background:#ffcc00;color:#000000">Текст на жёлтой кнопке</div>
+      <div class="swatch" style="background:#0a0a0a;color:#ffcc00">Жёлтый акцент на тёмном фоне</div>
+      <div class="swatch" style="background:#ffffff;color:#121212">Текст на карточке в светлой теме</div>
     </div>
   </div>
 </article>
@@ -62,7 +74,7 @@
 <article class="entry-card" data-work>
   <h3><span>3. Единообразие элементов</span></h3>
   <p><strong>Для чего:</strong> Чтобы посетителю не приходилось заново разбираться в интерфейсе на каждой странице: одинаковые вещи выглядят и работают одинаково.</p>
-  <p><strong>Как применено у меня:</strong> Все страницы используют один файл стилей. Карточки, кнопки, таблицы, шапка и подвал везде одной формы, с одинаковыми рамками и тенями. Предупреждения всегда красные, примечания — бирюзовые.</p>
+  <p><strong>Как применено у меня:</strong> Все страницы используют один файл стилей. Верхняя панель, карточки, кнопки, таблицы и подвал везде одной формы, с одинаковыми тонкими рамками. Предупреждения всегда розовые, а примечания — с жёлтой полоской слева.</p>
   <div class="example-box"><p class="label">Пример с этого сайта</p>
     <p><a class="btn" href="#content">Кнопка</a> <span class="note">Примечание</span></p>
     <p class="warn">Предупреждение выглядит одинаково везде.</p>
@@ -72,9 +84,9 @@
 <article class="entry-card" data-work>
   <h3><span>4. Удобная навигация</span></h3>
   <p><strong>Для чего:</strong> Чтобы из любого места сайта можно было за один клик перейти в нужный раздел и понять, где ты находишься.</p>
-  <p><strong>Как применено у меня:</strong> Меню одинаковое на всех страницах, текущий раздел подсвечен жёлтым. Работы разложены по четырём темам, а внутри раздела есть поиск и кнопки «Свернуть все» и «Развернуть все». На телефоне меню прячется за кнопкой «Меню».</p>
+  <p><strong>Как применено у меня:</strong> Меню одинаковое на всех страницах, текущий раздел подчёркнут жёлтой линией. Работы разложены по четырём темам, а внутри раздела есть поиск и кнопки «Свернуть все» и «Развернуть все». На телефоне меню прячется за кнопкой «Меню».</p>
   <div class="example-box"><p class="label">Пример с этого сайта</p>
-    <p>Посмотрите на меню в верхней части этой страницы: пункт «UX/UI» подсвечен.</p>
+    <p>Посмотрите на меню в верхней части этой страницы: пункт «UX/UI» подчёркнут.</p>
   </div>
 </article>
 
@@ -116,6 +128,7 @@
 </main>
 
 <footer class="site-footer">
+  <div class="footer-logo">АМИРХАН<span>★</span></div>
   <p>Толеутай Амирхан · группа 2-135 W-D</p>
   <p>© 2026 · Учебный проект: сайт создан в образовательных целях</p>
   <p><a href="admin.html">Вход для владельца</a> · <a href="https://github.com/playboicarti1629-doc/amirkhan-site" target="_blank" rel="noopener">Код сайта на GitHub</a></p>

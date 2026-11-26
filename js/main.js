@@ -21,12 +21,12 @@
   }
   var saved = storageGet('theme');
   var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-  applyTheme(saved || (prefersDark ? 'dark' : 'light'));
+  applyTheme(saved || 'dark');
 
   document.addEventListener('DOMContentLoaded', function () {
     var themeBtn = document.getElementById('themeToggle');
     if (themeBtn) {
-      applyTheme(document.documentElement.getAttribute('data-theme') || 'light');
+      applyTheme(document.documentElement.getAttribute('data-theme') || 'dark');
       themeBtn.addEventListener('click', function () {
         var next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
         applyTheme(next);

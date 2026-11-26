@@ -5,56 +5,80 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Главная — Толеутай Амирхан</title>
   <meta name="description" content="Учебное портфолио студента Web Design: практические работы, Blender, Figma, UX/UI, HTML, CSS и JavaScript.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
   <script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}</script>
 </head>
 <body>
 
-<header class="site-header">
-  <button type="button" class="theme-toggle" id="themeToggle" aria-pressed="false">☾ Тёмная тема</button>
-  <h1>Портфолио Амирхана</h1>
-  <p>Толеутай Амирхан · Web Design · группа 2-135 W-D</p>
+<header class="topbar">
+  <div class="topbar-inner">
+    <a href="index.html" class="logo">АМИРХАН<span class="logo-star">★</span></a>
+    <nav class="site-nav" id="siteNav" aria-label="Основное меню">
+      <a href="index.html" class="active" aria-current="page">Главная</a>
+      <a href="safety.html" title="Техника безопасности">Безопасность</a>
+      <a href="hardware.html">Оборудование</a>
+      <a href="software.html">ОС и ПО</a>
+      <a href="security.html" title="Информационная безопасность">Инфобезопасность</a>
+      <a href="blender.html">Blender</a>
+      <a href="figma.html">Figma</a>
+      <a href="ux-ui.html">UX/UI</a>
+      <a href="html-css.html" title="HTML, CSS и JS">HTML · CSS · JS</a>
+      <a href="reviews.html">Отзывы</a>
+    </nav>
+    <div class="topbar-tools">
+      <button type="button" class="theme-toggle" id="themeToggle" aria-pressed="false">☾ Тёмная тема</button>
+      <button type="button" class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="siteNav">☰ Меню</button>
+    </div>
+  </div>
 </header>
 
-<button type="button" class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="siteNav">☰ Меню</button>
-<nav class="site-nav" id="siteNav" aria-label="Основное меню">
-    <a href="index.html" class="active" aria-current="page">Главная</a>
-    <a href="safety.html">Техника безопасности</a>
-    <a href="hardware.html">Оборудование</a>
-    <a href="software.html">ОС и ПО</a>
-    <a href="security.html">Информационная безопасность</a>
-    <a href="blender.html">Blender</a>
-    <a href="figma.html">Figma</a>
-    <a href="ux-ui.html">UX/UI</a>
-    <a href="html-css.html">HTML, CSS и JS</a>
-    <a href="reviews.html">Отзывы</a>
-</nav>
+<main id="content">
+<section class="home-hero" aria-labelledby="hello">
+  <div class="home-hero-content">
+    <div class="hero-badge">Web Design · 2 курс · группа 2-135 W-D</div>
+    <h1 id="hello">Толеутай<br><span>Амирхан</span></h1>
+    <p class="hero-desc">Создаю интерфейсы, экспериментирую с 3D и превращаю идеи в рабочие проекты. Каждая ошибка — новый уровень.</p>
+    <div class="hero-actions">
+      <a href="#works" class="btn">Смотреть работы</a>
+      <a href="reviews.html" class="btn secondary">Оставить отзыв</a>
+    </div>
+  </div>
+</section>
 
-<main class="page-content" id="content">
-<section class="hero" aria-labelledby="hello">
-  <div class="hero-main">
-    <h2 id="hello">Привет! Я Амирхан 👋</h2>
-    <p><span class="badge">Толеутай Амирхан</span><span class="badge">Web Design</span><span class="badge">2 курс</span><span class="badge">Группа 2-135 W-D</span></p>
+<div class="about-strip">
+  <div class="about-strip-inner">
+    <div class="about-item"><span class="about-label">Специальность</span><span class="about-value">Web Design</span></div>
+    <div class="about-item"><span class="about-label">Изучаю</span><span class="about-value">Веб-дизайн · JavaScript · английский язык</span></div>
+    <div class="about-item"><span class="about-label">Увлечения</span><span class="about-value">Баскетбол · скетчи · музыка</span></div>
+    <div class="about-item"><span class="about-label">Музыка</span><span class="about-value">Playboi Carti · Future · Young Thug · Lil Uzi Vert · The Weeknd</span></div>
+  </div>
+</div>
+
+<div class="page-content">
+<h2 class="section-title" id="about">О себе</h2>
+<section class="about-me" aria-label="Обо мне">
+  <figure class="photo-frame">
+    <img src="images/photo.jpg" alt="Фото Амирхана" width="400" height="500" onerror="this.onerror=null;this.src='images/photo-placeholder.svg'">
+    <figcaption>Толеутай Амирхан</figcaption>
+  </figure>
+  <div class="about-text">
+    <h3>Привет! Я Амирхан 👋</h3>
+    <div class="badge-row"><span class="badge">Толеутай Амирхан</span><span class="badge">Web Design</span><span class="badge">2 курс</span><span class="badge">Группа 2-135 W-D</span></div>
     <p>Я студент 2 курса специальности Web Design. Изучаю веб-дизайн, JavaScript и английский язык. Мне нравится создавать что-то новое, экспериментировать с идеями и превращать задумки в реальные проекты.</p>
     <p>Вдохновение нахожу не только в технологиях, но и в музыке. Среди моих любимых артистов — Playboi Carti, Future, Young Thug, Lil Uzi Vert и The Weeknd.</p>
     <p>В свободное время играю в баскетбол, рисую скетчи и слушаю музыку. Люблю творческий подход, интересные идеи и постоянное развитие.</p>
     <p class="motto">Мой девиз: «Каждая ошибка — новый уровень».</p>
-  </div>
-  <aside class="hero-side" aria-label="Коротко обо мне">
-    <ul class="fact-list">
-      <li><strong>Специальность</strong>Web Design</li>
-      <li><strong>Изучаю</strong>Веб-дизайн, JavaScript, английский язык</li>
-      <li><strong>Увлечения</strong>Баскетбол, скетчи, музыка</li>
-      <li><strong>Музыка</strong>Playboi Carti, Future, Young Thug, Lil Uzi Vert, The Weeknd</li>
-    </ul>
     <p>Я не стремлюсь сразу знать всё. Мне интереснее пробовать новое, учиться на ошибках и с каждым проектом становиться лучше.</p>
-  </aside>
+  </div>
 </section>
 
 <h2 class="section-title">Для чего это портфолио</h2>
 <p class="intro">Это учебное портфолио собирает в одном месте мои результаты обучения: практические работы по информатике, 3D-модели из Blender, прототипы интерфейсов из Figma и сам сайт, написанный на HTML, CSS и JavaScript. Оно показывает, чему я научился, и помогает быстро найти нужные материалы по теме. Через форму в разделе «Отзывы» можно оставить мнение о работе — оно сохранится в базе данных.</p>
 
-<h2 class="section-title">Разделы сайта</h2>
+<h2 class="section-title" id="works">Разделы сайта</h2>
 <div class="card-grid">
   <a class="topic-card" href="safety.html">
     <h3>Техника безопасности и охрана труда</h3>
@@ -102,9 +126,11 @@
     <span class="count">база данных</span>
   </a>
 </div>
+</div>
 </main>
 
 <footer class="site-footer">
+  <div class="footer-logo">АМИРХАН<span>★</span></div>
   <p>Толеутай Амирхан · группа 2-135 W-D</p>
   <p>© 2026 · Учебный проект: сайт создан в образовательных целях</p>
   <p><a href="admin.html">Вход для владельца</a> · <a href="https://github.com/playboicarti1629-doc/amirkhan-site" target="_blank" rel="noopener">Код сайта на GitHub</a></p>
